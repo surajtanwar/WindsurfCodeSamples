@@ -7,10 +7,12 @@ namespace TizenNUILoginApp.Views
     {
         protected Window Window { get; private set; }
 
-        public ViewBase()
+        public ViewBase() : base()
         {
             Window = Window.Instance;
-            BackgroundColor = new Color("#FFFFFF");
+            BackgroundColor = Color.White;
+            WidthSpecification = LayoutParamPolicies.MatchParent;
+            HeightSpecification = LayoutParamPolicies.MatchParent;
         }
 
         public virtual void Show()

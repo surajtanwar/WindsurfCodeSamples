@@ -23,20 +23,21 @@ namespace TizenNUILoginApp
 
         private void InitializeComponents()
         {
-            Layout = new LinearLayout
+            Layout = new LinearLayout()
             {
                 LinearOrientation = LinearLayout.Orientation.Vertical,
                 LinearAlignment = LinearLayout.Alignment.Center,
                 CellPadding = new Size2D(20, 20)
             };
-            Size = new Size(Window.Size.Width, Window.Size.Height);
+            WidthSpecification = LayoutParamPolicies.MatchParent;
+            HeightSpecification = LayoutParamPolicies.MatchParent;
 
             var titleLabel = new TextLabel
             {
                 Text = "Login",
                 PointSize = 25,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                TextColor = new Color("#000000")
+                TextColor = Color.Black
             };
 
             usernameInput = new TextField
@@ -58,14 +59,14 @@ namespace TizenNUILoginApp
             {
                 Text = "Login",
                 Size = new Size(200, 50),
-                BackgroundColor = new Color("#2196F3")
+                BackgroundColor = new Color(0.13f, 0.59f, 0.95f, 1.0f)
             };
 
             signupButton = new Button
             {
                 Text = "Create Account",
                 Size = new Size(200, 50),
-                BackgroundColor = new Color("#4CAF50")
+                BackgroundColor = new Color(0.30f, 0.69f, 0.31f, 1.0f)
             };
 
             Add(titleLabel);
