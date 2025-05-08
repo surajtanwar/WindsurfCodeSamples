@@ -1,0 +1,2 @@
+# WindsurfCodeSamples
+Windsurf related experiments
