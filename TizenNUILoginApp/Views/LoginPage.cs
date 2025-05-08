@@ -3,10 +3,11 @@ using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using Tizen.NUI.Components;
 using TizenNUILoginApp.Controllers;
+using TizenNUILoginApp.Views;
 
-namespace TizenNUILoginApp.Views
+namespace TizenNUILoginApp
 {
-    public class LoginPage : ContentPage
+    public class LoginPage : ViewBase
     {
         private TextField usernameInput;
         private TextField passwordInput;
@@ -22,20 +23,13 @@ namespace TizenNUILoginApp.Views
 
         private void InitializeComponents()
         {
-            var window = Window.Instance;
-            BackgroundColor = new Color("#FFFFFF");
-
-            var stackLayout = new View
+            Layout = new LinearLayout
             {
-                Layout = new LinearLayout
-                {
-                    LinearOrientation = LinearLayout.Orientation.Vertical,
-                    LinearAlignment = LinearLayout.Alignment.Center,
-                    CellPadding = new Size2D(20, 20)
-                },
-                Size = new Size(window.Size.Width, window.Size.Height),
-                BackgroundColor = new Color("#FFFFFF")
+                LinearOrientation = LinearLayout.Orientation.Vertical,
+                LinearAlignment = LinearLayout.Alignment.Center,
+                CellPadding = new Size2D(20, 20)
             };
+            Size = new Size(Window.Size.Width, Window.Size.Height);
 
             var titleLabel = new TextLabel
             {
@@ -74,13 +68,11 @@ namespace TizenNUILoginApp.Views
                 BackgroundColor = new Color("#4CAF50")
             };
 
-            stackLayout.Add(titleLabel);
-            stackLayout.Add(usernameInput);
-            stackLayout.Add(passwordInput);
-            stackLayout.Add(loginButton);
-            stackLayout.Add(signupButton);
-
-            Add(stackLayout);
+            Add(titleLabel);
+            Add(usernameInput);
+            Add(passwordInput);
+            Add(loginButton);
+            Add(signupButton);
 
             loginButton.Clicked += OnLoginClicked;
             signupButton.Clicked += OnSignupClicked;
@@ -111,15 +103,15 @@ namespace TizenNUILoginApp.Views
         private void OnSignupClicked(object sender, ClickedEventArgs e)
         {
             var signupPage = new SignupPage();
-            Window.Instance.GetDefaultLayer().Add(signupPage);
-            this.Hide();
+            signupPage.Show();
+            Hide();
         }
 
         private void NavigateToRecipeDetails()
         {
             var recipeDetailsPage = new RecipeDetailsPage();
-            Window.Instance.GetDefaultLayer().Add(recipeDetailsPage);
-            this.Hide();
+            recipeDetailsPage.Show();
+            Hide();
         }
 
         private void ShowAlert(string title, string message)

@@ -4,7 +4,7 @@ using Tizen.NUI.Components;
 
 namespace TizenNUILoginApp.Views
 {
-    public class RecipeDetailsPage : ContentPage
+    public class RecipeDetailsPage : ViewBase
     {
         public RecipeDetailsPage()
         {

@@ -7,7 +7,7 @@ using TizenNUILoginApp.Models;
 
 namespace TizenNUILoginApp.Views
 {
-    public class SignupPage : ContentPage
+    public class SignupPage : ViewBase
     {
         private ScrollableBase scrollContainer;
         private View contentContainer;
@@ -203,8 +203,8 @@ namespace TizenNUILoginApp.Views
         private void NavigateToLogin()
         {
             var loginPage = new LoginPage();
-            Window.Instance.GetDefaultLayer().Add(loginPage);
-            this.Hide();
+            loginPage.Show();
+            Hide();
         }
 
         private bool ValidateInputs()

@@ -9,7 +9,7 @@ namespace TizenNUILoginApp
         {
             base.OnCreate();
             var loginPage = new LoginPage();
-            Window.Instance.Add(loginPage);
+            loginPage.Show();
         }
 
         static void Main(string[] args)
