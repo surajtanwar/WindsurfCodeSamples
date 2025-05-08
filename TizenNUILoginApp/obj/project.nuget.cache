@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "dgSpecHash": "u6yEqANB03I=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\suraj.tanwar\\CascadeProjects\\TizenNUILoginApp\\TizenNUILoginApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\tizen.net\\9.0.0.16760\\tizen.net.9.0.0.16760.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\tizen.net.api9\\9.0.0.16760\\tizen.net.api9.9.0.0.16760.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "TizenNUILoginApp depends on Tizen.NET (>= 9.0.0) but Tizen.NET 9.0.0 was not found. Tizen.NET 9.0.0.16760 was resolved instead.",
+      "libraryId": "Tizen.NET",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Tizen.NET.SDK with version (>= 9.0.0)\r\n  - Found 12 version(s) in nuget.org [ Nearest version: 1.2.1 ]",
+      "libraryId": "Tizen.NET.SDK",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
