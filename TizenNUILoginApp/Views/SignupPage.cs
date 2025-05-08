@@ -18,10 +18,10 @@ namespace TizenNUILoginApp.Views
         private TextField phoneField;
         private TextField addressField;
         private DatePicker dobPicker;
-        private Button profilePictureButton;
+        private PushButton profilePictureButton;
         private ImageView profileImageView;
-        private Button signupButton;
-        private Button backToLoginButton;
+        private PushButton signupButton;
+        private PushButton backToLoginButton;
         private TextLabel validationLabel;
         private UserController userController;
 
@@ -75,10 +75,10 @@ namespace TizenNUILoginApp.Views
                 Margin = new Extents(0, 0, 10, 10)
             };
 
-            profilePictureButton = new Button
+            profilePictureButton = new PushButton
             {
                 Text = "Upload Profile Picture",
-                Size = new Size(200, 50),
+                Size2D = new Size2D(200, 50),
                 Margin = new Extents(0, 0, 10, 20)
             };
 
@@ -90,18 +90,18 @@ namespace TizenNUILoginApp.Views
                 Visible = false
             };
 
-            signupButton = new Button
+            signupButton = new PushButton
             {
                 Text = "Sign Up",
-                Size = new Size(200, 50),
+                Size2D = new Size2D(200, 50),
                 BackgroundColor = new Color("#2196F3"),
                 Margin = new Extents(0, 0, 20, 0)
             };
 
-            backToLoginButton = new Button
+            backToLoginButton = new PushButton
             {
                 Text = "Back to Login",
-                Size = new Size(200, 50),
+                Size2D = new Size2D(200, 50),
                 BackgroundColor = new Color("#9E9E9E"),
                 Margin = new Extents(0, 0, 20, 0)
             };
@@ -244,12 +244,17 @@ namespace TizenNUILoginApp.Views
 
         private void ShowAlert(string title, string message)
         {
-            var alert = new AlertDialog()
+            var dialog = new MessageDialog()
             {
                 Title = title,
-                Message = message
+                Message = message,
+                PositiveButton = new PushButton()
+                {
+                    Text = "OK",
+                    BackgroundColor = new Color(0.13f, 0.59f, 0.95f, 1.0f)
+                }
             };
-            alert.Show();
+            dialog.ShowAsync();
         }
 
         private bool IsValidEmail(string email)

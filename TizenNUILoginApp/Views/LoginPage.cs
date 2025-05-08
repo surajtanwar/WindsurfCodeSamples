@@ -11,8 +11,8 @@ namespace TizenNUILoginApp
     {
         private TextField usernameInput;
         private TextField passwordInput;
-        private Button loginButton;
-        private Button signupButton;
+        private PushButton loginButton;
+        private PushButton signupButton;
         private UserController userController;
 
         public LoginPage()
@@ -55,17 +55,17 @@ namespace TizenNUILoginApp
             };
             passwordInput.InputMethodSettings.Mode = InputMethod.Mode.Password;
 
-            loginButton = new Button
+            loginButton = new PushButton
             {
                 Text = "Login",
-                Size = new Size(200, 50),
+                Size2D = new Size2D(200, 50),
                 BackgroundColor = new Color(0.13f, 0.59f, 0.95f, 1.0f)
             };
 
-            signupButton = new Button
+            signupButton = new PushButton
             {
                 Text = "Create Account",
-                Size = new Size(200, 50),
+                Size2D = new Size2D(200, 50),
                 BackgroundColor = new Color(0.30f, 0.69f, 0.31f, 1.0f)
             };
 
@@ -117,12 +117,17 @@ namespace TizenNUILoginApp
 
         private void ShowAlert(string title, string message)
         {
-            var alert = new AlertDialog()
+            var dialog = new MessageDialog()
             {
                 Title = title,
-                Message = message
+                Message = message,
+                PositiveButton = new PushButton()
+                {
+                    Text = "OK",
+                    BackgroundColor = new Color(0.13f, 0.59f, 0.95f, 1.0f)
+                }
             };
-            alert.Show();
+            dialog.ShowAsync();
         }
     }
 }

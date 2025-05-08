@@ -1,15 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Tizen.NET.Sdk/1.1.6">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>tizen60</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Tizen.NET" Version="9.0.0" />
-    <PackageReference Include="Tizen.NET.SDK" Version="9.0.0" />
-  </ItemGroup>
 
 </Project>
