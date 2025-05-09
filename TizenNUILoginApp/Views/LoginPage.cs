@@ -79,25 +79,25 @@ namespace TizenNUILoginApp
             signupButton.Clicked += OnSignupClicked;
         }
 
-        private void OnLoginClicked(object sender, ClickedEventArgs e)
+        private async void OnLoginClicked(object sender, ClickedEventArgs e)
         {
             string email = usernameInput.Text;
             string password = passwordInput.Text;
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                ShowAlert("Error", "Please enter both email and password.");
+                await ShowAlertDialog(new AlertDialogOptions("Validation Error", "Please enter both email and password.", AlertType.Warning));
                 return;
             }
 
             if (userController.ValidateLogin(email, password))
             {
-                ShowAlert("Success", "Login Successful!");
+                await ShowAlertDialog(new AlertDialogOptions("Welcome", "Login Successful!", AlertType.Success));
                 NavigateToRecipeDetails();
             }
             else
             {
-                ShowAlert("Error", "Invalid email or password.");
+                await ShowAlertDialog(new AlertDialogOptions("Authentication Failed", "Invalid email or password.", AlertType.Error));
             }
         }
 
@@ -115,19 +115,124 @@ namespace TizenNUILoginApp
             Hide();
         }
 
-        private void ShowAlert(string title, string message)
+        /// <summary>
+        /// Defines the type of alert message to be displayed.
+        /// </summary>
+        private enum AlertType
         {
-            var dialog = new MessageDialog()
+            /// <summary>General information message (default)</summary>
+            Info,
+            /// <summary>Positive outcome or successful operation</summary>
+            Success,
+            /// <summary>Cautionary message or potential issue</summary>
+            Warning,
+            /// <summary>Error condition or operation failure</summary>
+            Error
+        }
+
+        /// <summary>
+        /// Options for configuring an alert dialog.
+        /// </summary>
+        private class AlertDialogOptions
+        {
+            /// <summary>The title of the alert dialog</summary>
+            public string Title { get; set; }
+
+            /// <summary>The main message content of the alert</summary>
+            public string Message { get; set; }
+
+            /// <summary>The type of alert which determines the color scheme</summary>
+            public AlertType Type { get; set; } = AlertType.Info;
+
+            /// <summary>The text to display on the confirmation button</summary>
+            public string ButtonText { get; set; } = "OK";
+
+            /// <summary>
+            /// Creates a new instance of AlertDialogOptions with required parameters.
+            /// </summary>
+            public AlertDialogOptions(string title, string message)
             {
-                Title = title,
-                Message = message,
-                PositiveButton = new PushButton()
-                {
-                    Text = "OK",
-                    BackgroundColor = new Color(0.13f, 0.59f, 0.95f, 1.0f)
-                }
+                Title = title;
+                Message = message;
+            }
+
+            /// <summary>
+            /// Creates a new instance of AlertDialogOptions with all parameters.
+            /// </summary>
+            public AlertDialogOptions(string title, string message, AlertType type, string buttonText = "OK")
+            {
+                Title = title;
+                Message = message;
+                Type = type;
+                ButtonText = buttonText;
+            }
+        }
+
+        /// <summary>
+        /// Defines standard colors for different types of alerts.
+        /// Colors use RGBA values in the range 0-1.
+        /// </summary>
+        private static class AlertColors
+        {
+            public static readonly Color Primary = new Color(0.13f, 0.59f, 0.95f, 1.0f);   // Blue
+            public static readonly Color Success = new Color(0.30f, 0.69f, 0.31f, 1.0f);   // Green
+            public static readonly Color Warning = new Color(1.0f, 0.64f, 0.0f, 1.0f);     // Orange
+            public static readonly Color Error = new Color(0.96f, 0.26f, 0.21f, 1.0f);     // Red
+        }
+
+        /// <summary>
+        /// Displays an asynchronous alert dialog with customizable appearance.
+        /// </summary>
+        /// <param name="options">The options for configuring the alert dialog.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        /// <remarks>
+        /// The alert dialog's appearance changes based on the AlertType in options:
+        /// - Info: Blue color scheme for general information
+        /// - Success: Green color scheme for positive outcomes
+        /// - Warning: Orange color scheme for cautionary messages
+        /// - Error: Red color scheme for error conditions
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// // Display a success message
+        /// await ShowAlertDialog(new AlertDialogOptions("Success", "Operation completed!", AlertType.Success));
+        /// 
+        /// // Display an error with custom button text
+        /// await ShowAlertDialog(new AlertDialogOptions("Error", "Operation failed", AlertType.Error, "Try Again"));
+        /// </code>
+        /// </example>
+        private async Task ShowAlertDialog(AlertDialogOptions options)
+        {
+            if (options == null || string.IsNullOrEmpty(options.Title) || string.IsNullOrEmpty(options.Message))
+            {
+                return;
+            }
+
+            Color buttonColor = options.Type switch
+            {
+                AlertType.Success => AlertColors.Success,
+                AlertType.Warning => AlertColors.Warning,
+                AlertType.Error => AlertColors.Error,
+                _ => AlertColors.Primary
             };
-            dialog.ShowAsync();
+
+            try
+            {
+                var dialog = new MessageDialog()
+                {
+                    Title = options.Title,
+                    Message = options.Message,
+                    PositiveButton = new PushButton()
+                    {
+                        Text = options.ButtonText,
+                        BackgroundColor = buttonColor,
+                        WidthSpecification = LayoutParamPolicies.MatchParent,
+                        HeightSpecification = 40,
+                        Margin = new Extents(10, 10, 5, 5)
+                    }
+                };
+
+                await dialog.ShowAsync();
         }
     }
 }
