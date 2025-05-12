@@ -1,0 +1,10 @@
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.csproj.AssemblyReference.cache
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.AssemblyInfoInputs.cache
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.AssemblyInfo.cs
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.csproj.CoreCompileInputs.cache
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\bin\Release\tizen70\TizenNuiLoginApp.deps.json
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\bin\Release\tizen70\TizenNuiLoginApp.dll
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\bin\Release\tizen70\TizenNuiLoginApp.pdb
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.dll
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\obj\Release\tizen70\TizenNuiLoginApp.pdb

@@ -1,0 +1,5 @@
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\publish\TizenNuiLoginApp.exe
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\publish\TizenNuiLoginApp.dll
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\publish\TizenNuiLoginApp.deps.json
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\publish\TizenNuiLoginApp.runtimeconfig.json
+C:\Users\suraj\CascadeProjects\TizenNuiLoginApp\publish\TizenNuiLoginApp.pdb

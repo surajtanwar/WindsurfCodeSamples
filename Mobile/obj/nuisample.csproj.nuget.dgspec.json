@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\nuisample.csproj": {}
+  },
+  "projects": {
+    "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\nuisample.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\nuisample.csproj",
+        "projectName": "nuisample",
+        "projectPath": "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\nuisample.csproj",
+        "packagesPath": "C:\\Users\\suraj\\.nuget\\packages\\",
+        "outputPath": "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\NuGet.Config",
+          "C:\\Users\\suraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "tizen7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.tizen.org/v2/feed/netcore/nuget/": {}
+        },
+        "frameworks": {
+          "tizen70": {
+            "targetAlias": "tizen7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "tizen70": {
+          "targetAlias": "tizen7.0",
+          "dependencies": {
+            "Tizen.NET": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Tizen.NUI": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

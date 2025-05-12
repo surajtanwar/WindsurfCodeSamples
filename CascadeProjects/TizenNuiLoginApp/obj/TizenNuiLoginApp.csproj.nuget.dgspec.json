@@ -1,0 +1,54 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\TizenNuiLoginApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\TizenNuiLoginApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\TizenNuiLoginApp.csproj",
+        "projectName": "TizenNuiLoginApp",
+        "projectPath": "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\TizenNuiLoginApp.csproj",
+        "packagesPath": "C:\\Users\\suraj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\suraj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "tizen10.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.tizen.org/v2/feed/netcore/nuget": {}
+        },
+        "frameworks": {
+          "tizen10.0": {
+            "targetAlias": "tizen10.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "tizen10.0": {
+          "targetAlias": "tizen10.0",
+          "dependencies": {
+            "Tizen.NET": {
+              "target": "Package",
+              "version": "[12.0.0.18510, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

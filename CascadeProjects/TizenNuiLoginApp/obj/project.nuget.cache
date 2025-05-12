@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0mxWoVxTCCVumx4pD3ktE5Sn2oEerf6viZ6o/FVhgikUNalkJtSKQGWK0tfRFARikAW8KSwHoeorc4+HYHwL1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\suraj\\CascadeProjects\\TizenNuiLoginApp\\TizenNuiLoginApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\suraj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\tizen.net\\12.0.0.18510\\tizen.net.12.0.0.18510.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\tizen.net.api10\\10.0.0.17508\\tizen.net.api10.10.0.0.17508.nupkg.sha512"
+  ],
+  "logs": []
+}

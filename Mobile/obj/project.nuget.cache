@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "Zf3pj/Im5Wn4/IovhHiotCuAnZyVQdG+FjBwykT2BuE7n4UUpC7+S1VyBVNN/kVajv17L+z9+EJt0LwhaKEHkA==",
+  "success": false,
+  "projectFilePath": "D:\\VSCODE_Workspace\\Windsurf\\Mobile\\nuisample.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Tizen.NET' from remote source 'https://api.nuget.tizen.org/v2/feed/netcore/nuget/FindPackagesById()?id='Tizen.NET'&semVerLevel=2.0.0'.",
+      "libraryId": "Tizen.NET"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Tizen.NUI' from remote source 'https://api.nuget.tizen.org/v2/feed/netcore/nuget/FindPackagesById()?id='Tizen.NUI'&semVerLevel=2.0.0'.",
+      "libraryId": "Tizen.NUI"
+    }
+  ]
+}

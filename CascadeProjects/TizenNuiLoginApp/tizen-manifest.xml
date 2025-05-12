@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.example.tizennuiloginapp" version="1.0.0">
+    <profile name="mobile" version="7.0"/>
+    <ui-application appid="org.example.tizennuiloginapp" exec="TizenNuiLoginApp.dll" type="dotnet" multiple="false" taskmanage="true">
+        <label>TizenNuiLoginApp</label>
+        <icon>icon.png</icon>
+    </ui-application>
+    <privileges>
+    </privileges>
+</manifest>
