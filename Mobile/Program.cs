@@ -8,17 +8,11 @@ namespace nuisample
         protected override void OnCreate()
         {
             base.OnCreate();
-            var text = new TextLabel
-            {
-                Text = "Hello, Tizen NUI!",
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                PointSize = 20.0f,
-                Size2D = new Size2D(360, 100),
-                Position2D = new Position2D(30, 400)
-            };
-            Window.Instance.Add(text);
+            var recipeDetail = new Views.RecipeDetailView();
+            Window.Instance.Add(recipeDetail);
         }
+
+
         static void Main(string[] args)
         {
             var app = new Program();

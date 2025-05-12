@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "tizen7.0"
+          "tizen10.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -27,8 +27,8 @@
           "https://api.nuget.tizen.org/v2/feed/netcore/nuget/": {}
         },
         "frameworks": {
-          "tizen70": {
-            "targetAlias": "tizen7.0",
+          "tizen10.0": {
+            "targetAlias": "tizen10.0",
             "projectReferences": {}
           }
         },
@@ -39,8 +39,8 @@
         }
       },
       "frameworks": {
-        "tizen70": {
-          "targetAlias": "tizen7.0",
+        "tizen10.0": {
+          "targetAlias": "tizen10.0",
           "dependencies": {
             "Tizen.NET": {
               "target": "Package",
