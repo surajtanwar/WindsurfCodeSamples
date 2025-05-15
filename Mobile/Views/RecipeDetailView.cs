@@ -15,10 +15,12 @@ namespace nuisample.Views
             // Recipe Image + Favorite Icon
             var image = new ImageView
             {
-                ResourceUrl = "recipe-details.png", // Use your image file
+                // Use absolute path for image if needed, fallback to Home.png if not found
+                ResourceUrl = System.IO.File.Exists("recipe-details.png") ? "recipe-details.png" : "Home.png",
                 Size2D = new Size2D(window.Size.Width, 220),
                 Position2D = new Position2D(0, 0),
-                CornerRadius = 0
+                CornerRadius = 0,
+                BackgroundColor = Color.White // Ensure background is not transparent
             };
             Add(image);
             var favorite = new TextLabel
@@ -48,11 +50,13 @@ namespace nuisample.Views
             var title = new TextLabel
             {
                 Text = "Prime Rib Roast",
-                PointSize = 14.0f,
+                PointSize = 20.0f,
+                PixelSize = 36,
                 TextColor = new Color(0, 0.5f, 1, 1),
                 Position2D = new Position2D(0, 260),
-                Size2D = new Size2D(window.Size.Width, 40),
+                Size2D = new Size2D(window.Size.Width, 60),
                 HorizontalAlignment = HorizontalAlignment.Center,
+                MultiLine = true,
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
             };
             Add(title);
@@ -106,11 +110,13 @@ namespace nuisample.Views
                 var item = new TextLabel
                 {
                     Text = "• " + shopping[i],
-                    PointSize = 8.0f,
+                    PointSize = 10.0f,
+                    PixelSize = 22,
                     TextColor = Color.Black,
-                    Position2D = new Position2D(40, 440 + i*28),
-                    Size2D = new Size2D(window.Size.Width-80, 28),
-                    MultiLine = true
+                    Position2D = new Position2D(40, 440 + i*38),
+                    Size2D = new Size2D(window.Size.Width-80, 38),
+                    MultiLine = true,
+                    Ellipsis = false // Prevent '...'
                 };
                 Add(item);
             }
