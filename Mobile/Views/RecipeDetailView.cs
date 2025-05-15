@@ -15,8 +15,7 @@ namespace nuisample.Views
             // Recipe Image + Favorite Icon
             var image = new ImageView
             {
-                // Use absolute path for image if needed, fallback to Home.png if not found
-                ResourceUrl = System.IO.File.Exists("recipe-details.png") ? "recipe-details.png" : "Home.png",
+                ResourceUrl = "recipe-details.png",
                 Size2D = new Size2D(window.Size.Width, 220),
                 Position2D = new Position2D(0, 0),
                 CornerRadius = 0,
@@ -63,23 +62,23 @@ namespace nuisample.Views
             var desc = new TextLabel
             {
                 Text = "The Prime Rib Roast is a classic and tender cut of beef taken from the rib primal cut. Learn how to make the perfect prime rib roast to serve your family and friends. Check out Whaot's Cooking America's award-winning Classic Prime Rib Roast recipe and photo tutorial to help you make the Perfect Prime Rib Roast.",
-                PointSize = 8.0f,
+                PointSize = 10.0f,
+                PixelSize = 22,
                 TextColor = Color.Black,
                 Position2D = new Position2D(30, 300),
-                Size2D = new Size2D(window.Size.Width - 60, 70),
+                Size2D = new Size2D(window.Size.Width - 60, 120), // Increased height
                 MultiLine = true,
+                Ellipsis = false, // Prevent '...'
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(desc);
 
             // Shopping List Title
-            var shoppingIcon = new TextLabel
+            var shoppingIcon = new ImageView
             {
-                Text = "🛒",
-                PointSize = 14.0f,
+                ResourceUrl = "icon.png",
+                Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 380),
-                Size2D = new Size2D(40, 30),
-                HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(shoppingIcon);
             var shoppingTitle = new TextLabel
@@ -122,23 +121,24 @@ namespace nuisample.Views
             }
 
             // Preparation Title
-            var prepIcon = new TextLabel
+            var prepIcon = new ImageView
             {
-                Text = "📝",
-                PointSize = 14.0f,
+                ResourceUrl = "icon.png",
+                Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 675),
-                Size2D = new Size2D(40, 30),
-                HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(prepIcon);
             var prepTitle = new TextLabel
             {
                 Text = "PREPARATION",
-                PointSize = 10.0f,
+                PointSize = 16.0f,
+                PixelSize = 30,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(window.Size.Width/2 - 80, 705),
-                Size2D = new Size2D(160, 30),
+                Position2D = new Position2D(window.Size.Width/2 - 120, 705),
+                Size2D = new Size2D(240, 50),
                 HorizontalAlignment = HorizontalAlignment.Center,
+                MultiLine = true,
+                Ellipsis = false,
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
             };
             Add(prepTitle);
@@ -164,23 +164,24 @@ namespace nuisample.Views
             }
 
             // Comments Title
-            var commentIcon = new TextLabel
+            var commentIcon = new ImageView
             {
-                Text = "💬",
-                PointSize = 14.0f,
+                ResourceUrl = "icon.png",
+                Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 950),
-                Size2D = new Size2D(40, 30),
-                HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(commentIcon);
             var commentTitle = new TextLabel
             {
                 Text = "COMMENTS",
-                PointSize = 10.0f,
+                PointSize = 16.0f,
+                PixelSize = 30,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(window.Size.Width/2 - 80, 980),
-                Size2D = new Size2D(160, 30),
+                Position2D = new Position2D(window.Size.Width/2 - 120, 980),
+                Size2D = new Size2D(240, 50),
                 HorizontalAlignment = HorizontalAlignment.Center,
+                MultiLine = true,
+                Ellipsis = false,
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
             };
             Add(commentTitle);
@@ -253,12 +254,11 @@ namespace nuisample.Views
                 PointSize = 8.0f
             };
             Add(commentInput);
-            var sendIcon = new TextLabel
+            var sendIcon = new ImageView
             {
-                Text = "📩",
-                PointSize = 14.0f,
+                ResourceUrl = "icon.png",
+                Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width-60, 1210),
-                Size2D = new Size2D(40, 40)
             };
             Add(sendIcon);
         }
