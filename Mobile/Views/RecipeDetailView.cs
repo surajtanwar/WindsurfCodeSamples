@@ -12,6 +12,23 @@ namespace nuisample.Views
             Size2D = new Size2D(window.Size.Width, window.Size.Height);
             BackgroundColor = Color.White;
 
+            // Create a scrollable container
+            var scroll = new ScrollableBase
+            {
+                Size2D = new Size2D(window.Size.Width, window.Size.Height),
+                Position2D = new Position2D(0, 0),
+            };
+            Add(scroll);
+
+            // Content container for all UI elements
+            var contentView = new View
+            {
+                Size2D = new Size2D(window.Size.Width, 1850), // Set height to fit all content
+                Position2D = new Position2D(0, 0),
+                BackgroundColor = Color.White
+            };
+            scroll.Add(contentView);
+
             // Recipe Image + Favorite Icon
             var image = new ImageView
             {
@@ -21,7 +38,7 @@ namespace nuisample.Views
                 CornerRadius = 0,
                 BackgroundColor = Color.White // Ensure background is not transparent
             };
-            Add(image);
+            contentView.Add(image);
             var favorite = new TextLabel
             {
                 Text = "♥",
@@ -33,7 +50,7 @@ namespace nuisample.Views
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center
             };
-            Add(favorite);
+            contentView.Add(favorite);
 
             // Title & Stars
             var stars = new TextLabel
@@ -45,7 +62,7 @@ namespace nuisample.Views
                 Size2D = new Size2D(window.Size.Width, 30),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
-            Add(stars);
+            contentView.Add(stars);
             var title = new TextLabel
             {
                 Text = "Prime Rib Roast",
@@ -56,9 +73,9 @@ namespace nuisample.Views
                 Size2D = new Size2D(window.Size.Width, 60),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
-                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
+                FontStyle = new PropertyMap().contentView.Add("weight", new PropertyValue("bold"))
             };
-            Add(title);
+            contentView.Add(title);
             var desc = new TextLabel
             {
                 Text = "The Prime Rib Roast is a classic and tender cut of beef taken from the rib primal cut. Learn how to make the perfect prime rib roast to serve your family and friends. Check out Whaot's Cooking America's award-winning Classic Prime Rib Roast recipe and photo tutorial to help you make the Perfect Prime Rib Roast.",
@@ -71,7 +88,7 @@ namespace nuisample.Views
                 Ellipsis = false, // Prevent '...'
                 HorizontalAlignment = HorizontalAlignment.Center
             };
-            Add(desc);
+            contentView.Add(desc);
 
             // Shopping List Title
             var shoppingIcon = new ImageView
@@ -80,7 +97,7 @@ namespace nuisample.Views
                 Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 520), // Increased gap below desc
             };
-            Add(shoppingIcon);
+            contentView.Add(shoppingIcon);
             var shoppingTitle = new TextLabel
             {
                 Text = "SHOPPING LIST",
@@ -89,9 +106,9 @@ namespace nuisample.Views
                 Position2D = new Position2D(window.Size.Width/2 - 80, 570), // Increased gap below shopping icon
                 Size2D = new Size2D(160, 30),
                 HorizontalAlignment = HorizontalAlignment.Center,
-                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
+                FontStyle = new PropertyMap().contentView.Add("weight", new PropertyValue("bold"))
             };
-            Add(shoppingTitle);
+            contentView.Add(shoppingTitle);
 
             // Shopping List Items
             string[] shopping = new string[] {
@@ -118,7 +135,7 @@ namespace nuisample.Views
                     MultiLine = true,
                     Ellipsis = false // Prevent '...'
                 };
-                Add(item);
+                contentView.Add(item);
             }
 
             // Preparation Title
@@ -128,7 +145,7 @@ namespace nuisample.Views
                 Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 1050), // Increased gap below shopping list
             };
-            Add(prepIcon);
+            contentView.Add(prepIcon);
             var prepTitle = new TextLabel
             {
                 Text = "PREPARATION",
@@ -140,9 +157,9 @@ namespace nuisample.Views
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
                 Ellipsis = false,
-                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
+                FontStyle = new PropertyMap().contentView.Add("weight", new PropertyValue("bold"))
             };
-            Add(prepTitle);
+            contentView.Add(prepTitle);
 
             string[] steps = new string[] {
                 "Preheat oven to 350 degrees F. Let roast stand at room temperature for 1 hour.",
@@ -162,7 +179,7 @@ namespace nuisample.Views
                     Size2D = new Size2D(window.Size.Width-80, 58),
                     MultiLine = true
                 };
-                Add(step);
+                contentView.Add(step);
             }
 
             // Comments Title
@@ -172,7 +189,7 @@ namespace nuisample.Views
                 Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width/2 - 20, 1400), // Increased gap below prep steps
             };
-            Add(commentIcon);
+            contentView.Add(commentIcon);
             var commentTitle = new TextLabel
             {
                 Text = "COMMENTS",
@@ -184,9 +201,9 @@ namespace nuisample.Views
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
                 Ellipsis = false,
-                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
+                FontStyle = new PropertyMap().contentView.Add("weight", new PropertyValue("bold"))
             };
-            Add(commentTitle);
+            contentView.Add(commentTitle);
 
             // Comments
             var comments = new List<(string, string, string, string, int)>
@@ -206,7 +223,7 @@ namespace nuisample.Views
                     Position2D = new Position2D(30, y),
                     Size2D = new Size2D(40, 40)
                 };
-                Add(avatarLabel);
+                contentView.Add(avatarLabel);
                 var nameLabel = new TextLabel
                 {
                     Text = name,
@@ -214,9 +231,9 @@ namespace nuisample.Views
                     TextColor = Color.Black,
                     Position2D = new Position2D(80, y),
                     Size2D = new Size2D(180, 20),
-                    FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
+                    FontStyle = new PropertyMap().contentView.Add("weight", new PropertyValue("bold"))
                 };
-                Add(nameLabel);
+                contentView.Add(nameLabel);
                 var dateLabel = new TextLabel
                 {
                     Text = date,
@@ -225,7 +242,7 @@ namespace nuisample.Views
                     Position2D = new Position2D(270, y),
                     Size2D = new Size2D(120, 20)
                 };
-                Add(dateLabel);
+                contentView.Add(dateLabel);
                 var starLabel = new TextLabel
                 {
                     Text = stars,
@@ -234,7 +251,7 @@ namespace nuisample.Views
                     Position2D = new Position2D(80, y+20),
                     Size2D = new Size2D(100, 20)
                 };
-                Add(starLabel);
+                contentView.Add(starLabel);
                 var commentLabel = new TextLabel
                 {
                     Text = comment,
@@ -244,7 +261,7 @@ namespace nuisample.Views
                     Size2D = new Size2D(window.Size.Width-120, 40),
                     MultiLine = true
                 };
-                Add(commentLabel);
+                contentView.Add(commentLabel);
             }
 
             // Comment Input
@@ -256,14 +273,14 @@ namespace nuisample.Views
                 BackgroundColor = new Color(0.95f, 0.95f, 0.95f, 1),
                 PointSize = 8.0f
             };
-            Add(commentInput);
+            contentView.Add(commentInput);
             var sendIcon = new ImageView
             {
                 ResourceUrl = "icon.png",
                 Size2D = new Size2D(40, 40),
                 Position2D = new Position2D(window.Size.Width-60, 1750), // Align with comment input
             };
-            Add(sendIcon);
+            contentView.Add(sendIcon);
         }
     }
 }
