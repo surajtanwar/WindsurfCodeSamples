@@ -27,7 +27,7 @@ namespace nuisample.Views
                 Text = "♥",
                 PointSize = 18.0f,
                 TextColor = Color.White,
-                Position2D = new Position2D(window.Size.Width - 55, 20),
+                Position2D = new Position2D(window.Size.Width - 55, 40), // Increased gap below image
                 Size2D = new Size2D(35, 35),
                 BackgroundColor = new Color(0,0,0,0.3f),
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -41,7 +41,7 @@ namespace nuisample.Views
                 Text = "★ ★ ★ ★ ☆",
                 PointSize = 10.0f,
                 TextColor = new Color(1, 0.8f, 0, 1),
-                Position2D = new Position2D(0, 230),
+                Position2D = new Position2D(0, 270), // Increased gap below favorite
                 Size2D = new Size2D(window.Size.Width, 30),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
@@ -52,7 +52,7 @@ namespace nuisample.Views
                 PointSize = 20.0f,
                 PixelSize = 36,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(0, 260),
+                Position2D = new Position2D(0, 310), // Increased gap below stars
                 Size2D = new Size2D(window.Size.Width, 60),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
@@ -65,7 +65,7 @@ namespace nuisample.Views
                 PointSize = 10.0f,
                 PixelSize = 22,
                 TextColor = Color.Black,
-                Position2D = new Position2D(30, 300),
+                Position2D = new Position2D(30, 380), // Increased gap below title
                 Size2D = new Size2D(window.Size.Width - 60, 120), // Increased height
                 MultiLine = true,
                 Ellipsis = false, // Prevent '...'
@@ -78,7 +78,7 @@ namespace nuisample.Views
             {
                 ResourceUrl = "icon.png",
                 Size2D = new Size2D(40, 40),
-                Position2D = new Position2D(window.Size.Width/2 - 20, 380),
+                Position2D = new Position2D(window.Size.Width/2 - 20, 520), // Increased gap below desc
             };
             Add(shoppingIcon);
             var shoppingTitle = new TextLabel
@@ -86,7 +86,7 @@ namespace nuisample.Views
                 Text = "SHOPPING LIST",
                 PointSize = 10.0f,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(window.Size.Width/2 - 80, 410),
+                Position2D = new Position2D(window.Size.Width/2 - 80, 570), // Increased gap below shopping icon
                 Size2D = new Size2D(160, 30),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold"))
@@ -104,6 +104,7 @@ namespace nuisample.Views
                 "1 cup water",
                 "3 drops Worcestershire sauce"
             };
+            int shoppingListStartY = 620; // Increased gap below shopping title
             for (int i=0; i<shopping.Length; i++)
             {
                 var item = new TextLabel
@@ -112,8 +113,8 @@ namespace nuisample.Views
                     PointSize = 10.0f,
                     PixelSize = 22,
                     TextColor = Color.Black,
-                    Position2D = new Position2D(40, 440 + i*38),
-                    Size2D = new Size2D(window.Size.Width-80, 38),
+                    Position2D = new Position2D(40, shoppingListStartY + i*48), // Increased line spacing
+                    Size2D = new Size2D(window.Size.Width-80, 48),
                     MultiLine = true,
                     Ellipsis = false // Prevent '...'
                 };
@@ -125,7 +126,7 @@ namespace nuisample.Views
             {
                 ResourceUrl = "icon.png",
                 Size2D = new Size2D(40, 40),
-                Position2D = new Position2D(window.Size.Width/2 - 20, 675),
+                Position2D = new Position2D(window.Size.Width/2 - 20, 1050), // Increased gap below shopping list
             };
             Add(prepIcon);
             var prepTitle = new TextLabel
@@ -134,7 +135,7 @@ namespace nuisample.Views
                 PointSize = 16.0f,
                 PixelSize = 30,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(window.Size.Width/2 - 120, 705),
+                Position2D = new Position2D(window.Size.Width/2 - 120, 1100), // Increased gap below prep icon
                 Size2D = new Size2D(240, 50),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
@@ -149,6 +150,7 @@ namespace nuisample.Views
                 "Finely mince the parsley. Mix together with the minced garlic, 1/4 teaspoon salt, and a generous amount of pepper. Using the tip of a sharp knife, bore 7 to 10 narrow holes, each about 1 1/2" deep, in the rib roast. Fill the holes with the parsley-garlic mixture. Spread any remaining mixture over the surface of the roast. Sprinkle all sides of the meat with salt and pepper.",
                 "After slicing the roast, add any accumulated meat juices to the balsamic sauce. Serve the meat slices on warmed plates with balsamic sauce on the side."
             };
+            int prepStepsStartY = 1160; // Increased gap below prep title
             for (int i=0; i<steps.Length; i++)
             {
                 var step = new TextLabel
@@ -156,8 +158,8 @@ namespace nuisample.Views
                     Text = "✔ " + steps[i],
                     PointSize = 8.0f,
                     TextColor = Color.Black,
-                    Position2D = new Position2D(40, 735 + i*48),
-                    Size2D = new Size2D(window.Size.Width-80, 48),
+                    Position2D = new Position2D(40, prepStepsStartY + i*58), // Increased line spacing
+                    Size2D = new Size2D(window.Size.Width-80, 58),
                     MultiLine = true
                 };
                 Add(step);
@@ -168,7 +170,7 @@ namespace nuisample.Views
             {
                 ResourceUrl = "icon.png",
                 Size2D = new Size2D(40, 40),
-                Position2D = new Position2D(window.Size.Width/2 - 20, 950),
+                Position2D = new Position2D(window.Size.Width/2 - 20, 1400), // Increased gap below prep steps
             };
             Add(commentIcon);
             var commentTitle = new TextLabel
@@ -177,7 +179,7 @@ namespace nuisample.Views
                 PointSize = 16.0f,
                 PixelSize = 30,
                 TextColor = new Color(0, 0.5f, 1, 1),
-                Position2D = new Position2D(window.Size.Width/2 - 120, 980),
+                Position2D = new Position2D(window.Size.Width/2 - 120, 1450), // Increased gap below comment icon
                 Size2D = new Size2D(240, 50),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 MultiLine = true,
@@ -192,10 +194,11 @@ namespace nuisample.Views
                 ("TOM KLEIN", "This prime rib roast was amazing!!!", "7.01.2017", "★☆☆☆☆", 1),
                 ("SALLY PARKER", "I was amazed at how little preparation this took. Just rub on the herbs and butter, let it sit for a few hours and you have an amazing piece of meat!", "7.01.2017", "★★★★☆", 2)
             };
+            int commentsStartY = 1510; // Increased gap below comment title
             for (int i=0; i<comments.Count; i++)
             {
                 var (name, comment, date, stars, avatar) = comments[i];
-                var y = 1010 + i*90;
+                var y = commentsStartY + i*110; // Increased spacing between comments
                 var avatarLabel = new TextLabel
                 {
                     Text = avatar == 1 ? "👤" : "👩",
@@ -248,7 +251,7 @@ namespace nuisample.Views
             var commentInput = new TextField
             {
                 PlaceholderText = "Type your comment here...",
-                Position2D = new Position2D(30, 1210),
+                Position2D = new Position2D(30, 1750), // Increased gap below comments
                 Size2D = new Size2D(window.Size.Width-80, 40),
                 BackgroundColor = new Color(0.95f, 0.95f, 0.95f, 1),
                 PointSize = 8.0f
@@ -258,7 +261,7 @@ namespace nuisample.Views
             {
                 ResourceUrl = "icon.png",
                 Size2D = new Size2D(40, 40),
-                Position2D = new Position2D(window.Size.Width-60, 1210),
+                Position2D = new Position2D(window.Size.Width-60, 1750), // Align with comment input
             };
             Add(sendIcon);
         }
