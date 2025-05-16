@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "wGjkk78RtRo=",
+  "success": false,
+  "projectFilePath": "C:\\GitRepo\\WindsurfCodeSamples\\RecipeApp\\RecipeApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Tizen.NUI' from remote source 'https://nuget.tizen.org/api/v2/FindPackagesById()?id='Tizen.NUI'&semVerLevel=2.0.0'.\r\n  An error occurred while sending the request.\r\n  The response ended prematurely. (ResponseEnded)",
+      "libraryId": "Tizen.NUI"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Tizen.NET.Sdl' from remote source 'https://nuget.tizen.org/api/v2/FindPackagesById()?id='Tizen.NET.Sdl'&semVerLevel=2.0.0'.\r\n  An error occurred while sending the request.\r\n  The response ended prematurely. (ResponseEnded)",
+      "libraryId": "Tizen.NET.Sdl"
+    }
+  ]
+}

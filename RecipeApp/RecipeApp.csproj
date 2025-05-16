@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <TizenSdkVersion>8.0</TizenSdkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Tizen.NET.Sdl" Version="1.1.9" />
+    <PackageReference Include="Tizen.NUI" Version="2.1.0" />
+  </ItemGroup>
+</Project>
