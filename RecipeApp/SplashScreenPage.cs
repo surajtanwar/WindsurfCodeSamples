@@ -14,33 +14,30 @@ namespace RecipeApp
             // Rectangle background (375x667px, positioned at 0,0)
             var rectangleBg = new ImageView
             {
-                ResourceUrl = "images/splash/Rectangle.svg",
+                ResourceUrl = "images/splash/Rectangle.png",
                 Size2D = new Size2D(375, 667),
                 Position = new Position(0, 0),
-                PositionUsesPivotPoint = false,
-                ParentOrigin = ParentOrigin.TopLeft
+                PositionUsesPivotPoint = false
             };
             Add(rectangleBg);
 
-            // Group.svg overlay (left: 91px, top: 111px)
+            // Group.png overlay (left: 91px, top: 111px)
             var groupOverlay = new ImageView
             {
-                ResourceUrl = "images/splash/Group.svg",
+                ResourceUrl = "images/splash/Group.png",
                 Position = new Position(91, 111),
                 PositionUsesPivotPoint = false,
-                ParentOrigin = ParentOrigin.TopLeft,
-                Size2D = new Size2D(193, 160), // Set size if needed, else SVG will use intrinsic
+                Size2D = new Size2D(193, 160)
             };
             Add(groupOverlay);
 
-            // group_2.svg overlay (left: 93px, top: 365px)
+            // Group_2.png overlay (left: 93px, top: 365px)
             var group2Overlay = new ImageView
             {
-                ResourceUrl = "images/splash/group_2.svg",
+                ResourceUrl = "images/splash/Group_2.png",
                 Position = new Position(93, 365),
                 PositionUsesPivotPoint = false,
-                ParentOrigin = ParentOrigin.TopLeft,
-                Size2D = new Size2D(189, 140), // Set size if needed, else SVG will use intrinsic
+                Size2D = new Size2D(189, 140)
             };
             Add(group2Overlay);
         

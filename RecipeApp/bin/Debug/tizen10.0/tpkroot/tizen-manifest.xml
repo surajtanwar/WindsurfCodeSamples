@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.example.recipeapp" version="1.0.0" api-version="7.0">
+    <profile name="mobile" />
+    <ui-application appid="org.example.recipeapp" exec="RecipeApp.dll" type="dotnet" multiple="false" taskmanage="true">
+        <label>Recipe App</label>
+        <icon>icon.png</icon>
+    </ui-application>
+    <privileges>
+        <!-- Add privileges as needed -->
+    </privileges>
+</manifest>

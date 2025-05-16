@@ -4,3 +4,9 @@ C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.AssemblyI
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.AssemblyInfo.cs
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.csproj.CoreCompileInputs.cache
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.sourcelink.json
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\RecipeApp.deps.json
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\RecipeApp.dll
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\RecipeApp.pdb
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\XamlC.stamp
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.dll
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.pdb

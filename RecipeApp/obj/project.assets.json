@@ -924,8 +924,11 @@
         "targetAlias": "tizen10.0",
         "dependencies": {
           "Tizen.NET": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[10.0.0.17508, )"
+            "version": "[10.0.0.17508, )",
+            "autoReferenced": true
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"

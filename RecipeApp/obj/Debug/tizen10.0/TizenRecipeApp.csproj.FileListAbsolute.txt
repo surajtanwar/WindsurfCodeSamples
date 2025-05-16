@@ -1,0 +1,5 @@
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\bin\RecipeApp.dll
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\bin\RecipeApp.pdb
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\RecipeApp.deps.json
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\tizen-manifest.xml
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\org.example.recipeapp-1.0.0.tpk
