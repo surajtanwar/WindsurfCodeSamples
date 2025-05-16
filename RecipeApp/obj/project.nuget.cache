@@ -1,22 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZQSjpMaLv0k=",
-  "success": false,
+  "dgSpecHash": "TZAmRfM+d7g=",
+  "success": true,
   "projectFilePath": "C:\\GitRepo\\WindsurfCodeSamples\\RecipeApp\\RecipeApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\suraj.tanwar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\suraj.tanwar\\.nuget\\packages\\tizen.net\\10.0.0.17508\\tizen.net.10.0.0.17508.nupkg.sha512",
     "C:\\Users\\suraj.tanwar\\.nuget\\packages\\tizen.net.api10\\10.0.0.17508\\tizen.net.api10.10.0.0.17508.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1102",
-      "level": "Error",
-      "message": "Unable to find package Tizen.NUI with version (>= 0.9.2)\r\n  - Found 2 version(s) in nuget.org [ Nearest version: 0.2.43 ]",
-      "libraryId": "Tizen.NUI",
-      "targetGraphs": [
-        "Tizen,Version=v10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

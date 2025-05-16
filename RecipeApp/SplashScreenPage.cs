@@ -7,29 +7,43 @@ namespace RecipeApp
     {
         public SplashScreenPage()
         {
+            // Set full window size and white background
             Size2D = new Size2D(Window.Instance.WindowSize.Width, Window.Instance.WindowSize.Height);
             BackgroundColor = Color.White;
 
-            var logo = new ImageView
+            // Rectangle background (375x667px, positioned at 0,0)
+            var rectangleBg = new ImageView
             {
-                ResourceUrl = "splash_logo.png", // Place a logo image in project directory
-                Size2D = new Size2D(200, 200),
-                PositionUsesPivotPoint = true,
-                PivotPoint = PivotPoint.Center,
-                ParentOrigin = ParentOrigin.Center
+                ResourceUrl = "images/splash/Rectangle.svg",
+                Size2D = new Size2D(375, 667),
+                Position = new Position(0, 0),
+                PositionUsesPivotPoint = false,
+                ParentOrigin = ParentOrigin.TopLeft
             };
-            Add(logo);
+            Add(rectangleBg);
 
-            var label = new TextLabel
+            // Group.svg overlay (left: 91px, top: 111px)
+            var groupOverlay = new ImageView
             {
-                Text = "Recipe App",
-                PointSize = 16.0f,
-                TextColor = Color.Black,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                Position = new Position(0, 150)
+                ResourceUrl = "images/splash/Group.svg",
+                Position = new Position(91, 111),
+                PositionUsesPivotPoint = false,
+                ParentOrigin = ParentOrigin.TopLeft,
+                Size2D = new Size2D(193, 160), // Set size if needed, else SVG will use intrinsic
             };
-            Add(label);
+            Add(groupOverlay);
+
+            // group_2.svg overlay (left: 93px, top: 365px)
+            var group2Overlay = new ImageView
+            {
+                ResourceUrl = "images/splash/group_2.svg",
+                Position = new Position(93, 365),
+                PositionUsesPivotPoint = false,
+                ParentOrigin = ParentOrigin.TopLeft,
+                Size2D = new Size2D(189, 140), // Set size if needed, else SVG will use intrinsic
+            };
+            Add(group2Overlay);
+        
         }
     }
 }

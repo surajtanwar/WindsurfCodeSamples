@@ -1,0 +1,6 @@
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.csproj.AssemblyReference.cache
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.AssemblyInfoInputs.cache
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.AssemblyInfo.cs
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.csproj.CoreCompileInputs.cache
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\obj\Debug\tizen10.0\RecipeApp.sourcelink.json
