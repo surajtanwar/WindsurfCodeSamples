@@ -1,5 +1,6 @@
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
+using Tizen.Applications;
 
 namespace RecipeApp
 {
@@ -8,15 +9,15 @@ namespace RecipeApp
         public RecipeListPage()
         {
             // Set the main view size and background
-            Size2D = new Size2D(375, 667); // iPhone 8 size for reference
+            Size2D = new Size2D(750, 1334); // iPhone 8 size for reference
             BackgroundColor = Color.White;
 
             // Menu button (top-left)
             var btnMenu = new ImageView
             {
-                ResourceUrl = "images/home/btn-menu0.svg",
-                Size2D = new Size2D(24, 18),
-                Position = new Position(20, 10),
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/btn-menu0.svg",
+                Size2D = new Size2D(96, 72),
+                Position = new Position(80, 40),
                 PositionUsesPivotPoint = false
             };
             Add(btnMenu);
@@ -24,9 +25,9 @@ namespace RecipeApp
             // Search button (top-right)
             var btnSearch = new ImageView
             {
-                ResourceUrl = "images/home/btn-search0.svg",
-                Size2D = new Size2D(24, 24),
-                Position = new Position(331, 10), // 375-24-20 = 331
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/btn-search0.svg",
+                Size2D = new Size2D(96, 96),
+                Position = new Position(1324, 40), // 375-24-20 = 331
                 PositionUsesPivotPoint = false
             };
             Add(btnSearch);
@@ -40,7 +41,7 @@ namespace RecipeApp
                 TextColor = new Color(0.92f, 0.34f, 0.34f, 1.0f), // #eb5757
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Position = new Position(0, 10),
-                Size2D = new Size2D(375, 30)
+                Size2D = new Size2D(750, 60)
             };
             Add(popularRecipes);
 
@@ -51,8 +52,8 @@ namespace RecipeApp
                 PointSize = 13.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f), // #737373
-                Position = new Position(66, 84),
-                Size2D = new Size2D(100, 20),
+                Position = new Position(132, 168),
+                Size2D = new Size2D(200, 40),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(appetizers);
@@ -63,8 +64,8 @@ namespace RecipeApp
                 PointSize = 13.0f,
                 FontFamily = "Roboto-Medium",
                 TextColor = Color.Black,
-                Position = new Position(168, 84),
-                Size2D = new Size2D(100, 20),
+                Position = new Position(336, 168),
+                Size2D = new Size2D(200, 40),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(entrees);
@@ -75,8 +76,8 @@ namespace RecipeApp
                 PointSize = 13.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f),
-                Position = new Position(259, 84),
-                Size2D = new Size2D(100, 20),
+                Position = new Position(518, 168),
+                Size2D = new Size2D(200, 40),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(dessert);
@@ -84,9 +85,9 @@ namespace RecipeApp
             // Category underline (under ENTREES)
             var underline = new View
             {
-                Size2D = new Size2D(54, 2),
+                Size2D = new Size2D(108, 4),
                 BackgroundColor = Color.Black,
-                Position = new Position(179, 106),
+                Position = new Position(358, 212),
                 PositionUsesPivotPoint = false
             };
             Add(underline);
@@ -94,16 +95,16 @@ namespace RecipeApp
             // Mask groups (decorative SVGs, left/right)
             var maskGroupLeft = new ImageView
             {
-                ResourceUrl = "images/home/mask-group1.svg",
-                Position = new Position(-133, 136),
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
+                Position = new Position(-266, 272),
                 PositionUsesPivotPoint = false
             };
             Add(maskGroupLeft);
 
             var maskGroupRight = new ImageView
             {
-                ResourceUrl = "images/home/mask-group0.svg",
-                Position = new Position(308, 136),
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
+                Position = new Position(616, 272),
                 PositionUsesPivotPoint = false
             };
             Add(maskGroupRight);
@@ -111,9 +112,9 @@ namespace RecipeApp
             // Main recipe rectangle (center)
             var recipeRect = new ImageView
             {
-                ResourceUrl = "images/home/rectangle0.png",
-                Size2D = new Size2D(221, 221),
-                Position = new Position(77, 126),
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
+                Size2D = new Size2D(442, 442),
+                Position = new Position(154, 252),
                 PositionUsesPivotPoint = false
             };
             Add(recipeRect);
@@ -121,9 +122,9 @@ namespace RecipeApp
             // Heart button (top right of rectangle)
             var heartBtn = new ImageView
             {
-                ResourceUrl = "images/home/button-heart0.svg",
-                Size2D = new Size2D(20, 18),
-                Position = new Position(268, 137),
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/button-heart0.svg",
+                Size2D = new Size2D(40, 36),
+                Position = new Position(536, 274),
                 PositionUsesPivotPoint = false
             };
             Add(heartBtn);
@@ -133,9 +134,9 @@ namespace RecipeApp
             {
                 var star = new ImageView
                 {
-                    ResourceUrl = $"images/home/star{i}.svg",
-                    Size2D = new Size2D(16, 16),
-                    Position = new Position(123 + i * 21, 356),
+                    ResourceUrl = Application.Current.DirectoryInfo.Resource + $"images/home/star{i}.svg",
+                    Size2D = new Size2D(32, 32),
+                    Position = new Position(246 + i * 42, 712),
                     PositionUsesPivotPoint = false
                 };
                 Add(star);
@@ -148,8 +149,8 @@ namespace RecipeApp
                 PointSize = 18.0f,
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f), // #19597d
-                Position = new Position(123, 390),
-                Size2D = new Size2D(200, 30),
+                Position = new Position(246, 780),
+                Size2D = new Size2D(400, 60),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(recipeTitle);
@@ -161,8 +162,8 @@ namespace RecipeApp
             {
                 var icon = new ImageView
                 {
-                    ResourceUrl = $"images/home/{icons[i]}",
-                    Size2D = new Size2D(19, 18),
+                    ResourceUrl = Application.Current.DirectoryInfo.Resource + $"images/home/{icons[i]}",
+                    Size2D = new Size2D(38, 36),
                     Position = new Position(iconPositions[i], 427),
                     PositionUsesPivotPoint = false
                 };
@@ -175,8 +176,8 @@ namespace RecipeApp
                 PointSize = 14.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position(103, 427),
-                Size2D = new Size2D(40, 18),
+                Position = new Position(206, 854),
+                Size2D = new Size2D(80, 36),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(timeLabel);
@@ -187,8 +188,8 @@ namespace RecipeApp
                 PointSize = 14.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position(189, 427),
-                Size2D = new Size2D(40, 18),
+                Position = new Position(378, 854),
+                Size2D = new Size2D(80, 36),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(calLabel);
@@ -199,8 +200,8 @@ namespace RecipeApp
                 PointSize = 14.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position(268, 427),
-                Size2D = new Size2D(40, 18),
+                Position = new Position(536, 854),
+                Size2D = new Size2D(80, 36),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(likeLabel);
@@ -212,8 +213,8 @@ namespace RecipeApp
                 PointSize = 14.0f,
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.46f, 0.46f, 0.46f, 1.0f), // #757575
-                Position = new Position(21, 462),
-                Size2D = new Size2D(335, 80),
+                Position = new Position(42, 924),
+                Size2D = new Size2D(670, 160),
                 MultiLine = true,
                 HorizontalAlignment = HorizontalAlignment.Center
             };
