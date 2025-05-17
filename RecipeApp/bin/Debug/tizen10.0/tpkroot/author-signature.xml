@@ -6,17 +6,29 @@
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>kTQlzUSQv8s825M9d8kCr747n8A90clDM6lIeqgQbt/B0fwjmopffHfCKtSALlSuDyu4QRIMwdZjLrmNSjQY3A==</DigestValue>
     </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FRectangle.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>jHjhQlD0OmdGdY5mpRlHngGyvOKaBqzqkGEKU8QNeDal3Y2CJFMjRP38QWAYLQwDxtW0Pgq+81jBlLNocJDyiQ==</DigestValue>
+    </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FGroup.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>AzFUzflIjwyAHPYHl5eMJ0sjhTRw1/2QCC1vFw/4Gs0wzSnvUdmoQO3D08BfMYndv3uF/atGGX4xPZ7qB/qn6Q==</DigestValue>
+    </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FGroup_2.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>wFPg4dxq1NVQKkOzOP/8YEgHe1Bwjwxo2HLfVop6To8kIOs5oWNs37YzeJ+j7IOb4obkhEC8odx2MWeeHDdRTg==</DigestValue>
+    </Reference>
     <Reference URI="RecipeApp.deps.json">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>rx23Fb0tQHx87xFgGY0bNutrnwdNBm1tO+4Cl1LAneoQGS+JGxD1KieuVfMc3J2qoUc0J7yZ9NS5Z/+wnV+TmA==</DigestValue>
     </Reference>
     <Reference URI="bin%2FRecipeApp.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>YHd3m5mr5D5XvEJh5pm+LMEcPg3QdBmSgRIcoNoK+5gJO1Z7+rm1vs8paRo0g+G9lNZW6YTAHyNXETIUZSrN0A==</DigestValue>
+      <DigestValue>iGtMbSLwR+ebuQNJfz2hni75f1OpVfuHtniyONsVg4caSMXCIZJFMEG0nCDlpfKRz4L+NX7RoBrcEElzlEJTXg==</DigestValue>
     </Reference>
     <Reference URI="bin%2FRecipeApp.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>6ANGCq+1hHMlFOqXtaSsosglnrTBJ03tbV/elsujSKVitWAjmJM3jdEZALDdtxoFbs5VlBI3v5fYS1UqSu+YSA==</DigestValue>
+      <DigestValue>IK1fmjxKiP6wZf/T+l41NyX+qdLWjrccHn3jH1TedINOFvinY4YwZtVlor1OX9A8AUctMGzF46urMNNj+QFjFQ==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -27,9 +39,9 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-jghvXlFuv9KIQXAQ0XlwtsRu/I0KfJEdTo+kVHGrKizEAtJJzTcM4+vB8dVgh4EfYRSjSB6u4WIW
-CPj67um7AFG4SAX8DGCZOaea95nCzHq70dGwylW5XAWY/MkOrg4vOYzbPlq/VL1LDXnyM4AlwDWD
-EaKx7/vRPueqzPVi010=
+RIjk9fb2bbz8lFoMoFRJ9cu0L4zSAwvbTDdJbPyT1dOuS1tH5a93YgXLYtOQUl4SJrrtL3oTkEej
+JF9K+gnmW0u8jXlgJSHrXYgkZnt3Ajd00hemWzjjoFaTd7ik3jkTcWMwGDR2EtALGy+TIHfB7A8R
+GoYYNua1eJzqxVZYe6M=
 </SignatureValue>
   <KeyInfo>
     <X509Data>

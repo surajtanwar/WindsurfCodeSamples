@@ -6,21 +6,33 @@
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>kTQlzUSQv8s825M9d8kCr747n8A90clDM6lIeqgQbt/B0fwjmopffHfCKtSALlSuDyu4QRIMwdZjLrmNSjQY3A==</DigestValue>
     </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FRectangle.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>jHjhQlD0OmdGdY5mpRlHngGyvOKaBqzqkGEKU8QNeDal3Y2CJFMjRP38QWAYLQwDxtW0Pgq+81jBlLNocJDyiQ==</DigestValue>
+    </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FGroup.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>AzFUzflIjwyAHPYHl5eMJ0sjhTRw1/2QCC1vFw/4Gs0wzSnvUdmoQO3D08BfMYndv3uF/atGGX4xPZ7qB/qn6Q==</DigestValue>
+    </Reference>
+    <Reference URI="res%2Fimages%2Fsplash%2FGroup_2.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+      <DigestValue>wFPg4dxq1NVQKkOzOP/8YEgHe1Bwjwxo2HLfVop6To8kIOs5oWNs37YzeJ+j7IOb4obkhEC8odx2MWeeHDdRTg==</DigestValue>
+    </Reference>
     <Reference URI="RecipeApp.deps.json">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>rx23Fb0tQHx87xFgGY0bNutrnwdNBm1tO+4Cl1LAneoQGS+JGxD1KieuVfMc3J2qoUc0J7yZ9NS5Z/+wnV+TmA==</DigestValue>
     </Reference>
     <Reference URI="bin%2FRecipeApp.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>YHd3m5mr5D5XvEJh5pm+LMEcPg3QdBmSgRIcoNoK+5gJO1Z7+rm1vs8paRo0g+G9lNZW6YTAHyNXETIUZSrN0A==</DigestValue>
+      <DigestValue>iGtMbSLwR+ebuQNJfz2hni75f1OpVfuHtniyONsVg4caSMXCIZJFMEG0nCDlpfKRz4L+NX7RoBrcEElzlEJTXg==</DigestValue>
     </Reference>
     <Reference URI="bin%2FRecipeApp.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>6ANGCq+1hHMlFOqXtaSsosglnrTBJ03tbV/elsujSKVitWAjmJM3jdEZALDdtxoFbs5VlBI3v5fYS1UqSu+YSA==</DigestValue>
+      <DigestValue>IK1fmjxKiP6wZf/T+l41NyX+qdLWjrccHn3jH1TedINOFvinY4YwZtVlor1OX9A8AUctMGzF46urMNNj+QFjFQ==</DigestValue>
     </Reference>
     <Reference URI="author-signature.xml">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>MfwWDy+YQfOErVAu2NnfbiIaPmWt+guPJ14RTAuQAB+fgfhLg4tok0oclxRVr1ti+jCdYDlkdZ0RPs3p9NETHA==</DigestValue>
+      <DigestValue>+GKjOV4bg+hwaM+hqxVWpUQFA7EpQE3/ZiEDKA+bLaWA3kcizwSqy+psZLhpxkwpXAAUhI6IGCbDye0IrM+Auw==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -31,9 +43,9 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-muQVKqKr04ql+Z9pD/3fDjOGPq2CEb40Jf53Iv4ODELflf0vehuxouqA4NjeKI94w15xwMGxcQW9
-C9rucA3pHcRRydm+CKthC+QbtgyFc1Y78xHU0DjvWGh++ILYHDgn3boMlBo1v0oYPXSeGwSbVQIc
-LtDZrkx47eUU6S3z8sA=
+gq+93qL2A5ZoUlGXY/PVJueNKVYBJS8dmGXAo9rAeTn889+a0ajA257qMhK64J1RLCr9scQsUh4o
+VU2oCvzgKxEdxhNaTPfnlBy3jZCKbvkivu+8D2rlTNkzpLTcDSMSRanKdiRn7VYAzqrh1Z0nMe71
+GBKk+Gg4bPSMdaBU6e4=
 </SignatureValue>
   <KeyInfo>
     <X509Data>
