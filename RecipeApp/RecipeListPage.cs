@@ -105,9 +105,13 @@ namespace RecipeApp
 
             // Category labels
             float catY = 84 * scaleY;
-            float appetizersX = (screenWidth / 2) - (122.5f * scaleX);
-            float entreesX = (screenWidth / 2) - (17.5f * scaleX);
-            float dessertX = (screenWidth / 2) + (67.5f * scaleX);
+            float catLabelWidth = 100 * scaleX;
+            float catSpacing = 22.5f * scaleX;
+            float centerX = screenWidth / 2;
+            float appetizersX = centerX - catLabelWidth - catSpacing;
+            float entreesX = centerX - (catLabelWidth / 2);
+            float dessertX = centerX + catLabelWidth / 2 + catSpacing - catLabelWidth;
+
 
             appetizers = new TextLabel
             {
@@ -154,7 +158,7 @@ namespace RecipeApp
             {
                 BackgroundColor = Color.Black,
                 Size2D = new Size2D((int)(54 * scaleX), 2),
-                Position = new Position((int)((screenWidth / 2) - (16.5f * scaleX)), (int)(106 * scaleY)),
+                Position = new Position((int)(centerX - (54 * scaleX) / 2), (int)(106 * scaleY)),
             };
             Add(underline);
 
@@ -207,7 +211,7 @@ namespace RecipeApp
             {
                 ResourceUrl = carouselImages[(int)selectedCategory][carouselIndex],
                 Size2D = new Size2D((int)(221 * scaleX), (int)(221 * scaleY)),
-                Position = new Position((int)(77 * scaleX), (int)(126 * scaleY)),
+                Position = new Position((int)(centerX - (221 * scaleX) / 2), (int)(126 * scaleY)),
                 PositionUsesPivotPoint = false
             };
             Add(carouselView);
@@ -217,7 +221,7 @@ namespace RecipeApp
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
                 Size2D = new Size2D((int)(30 * scaleX), (int)(30 * scaleY)),
-                Position = new Position((int)(30 * scaleX), (int)(226 * scaleY)),
+                Position = new Position((int)(centerX - (221 * scaleX) / 2 - 35 * scaleX), (int)(226 * scaleY)),
                 PositionUsesPivotPoint = false
             };
             Add(leftBtn);
@@ -227,7 +231,7 @@ namespace RecipeApp
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
                 Size2D = new Size2D((int)(30 * scaleX), (int)(30 * scaleY)),
-                Position = new Position((int)(320 * scaleX), (int)(226 * scaleY)),
+                Position = new Position((int)(centerX + (221 * scaleX) / 2 + 5 * scaleX), (int)(226 * scaleY)),
                 PositionUsesPivotPoint = false
             };
             Add(rightBtn);
@@ -260,26 +264,10 @@ namespace RecipeApp
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/button-heart0.svg",
                 Size2D = new Size2D((int)(20 * scaleX), (int)(18 * scaleY)),
-                Position = new Position((int)(268 * scaleX), (int)(137 * scaleY)),
+                Position = new Position((int)(centerX + (221 * scaleX) / 2 - 30 * scaleX), (int)(137 * scaleY)),
                 PositionUsesPivotPoint = false
             };
             Add(heartBtn);
-
-            // 5 Stars (centered over rectangle)
-            float starsStartX = (float)(123 * scaleX);
-            float starY = (float)(356 * scaleY);
-            float starSpacing = 21 * scaleX;
-            for (int i = 0; i < 5; i++)
-            {
-                starViews[i] = new ImageView
-                {
-                    ResourceUrl = Application.Current.DirectoryInfo.Resource + $"images/home/star{i}.svg",
-                    Size2D = new Size2D((int)(16 * scaleX), (int)(16 * scaleY)),
-                    Position = new Position((int)(starsStartX + i * starSpacing), (int)starY),
-                    PositionUsesPivotPoint = false
-                };
-                Add(starViews[i]);
-            }
 
             // Recipe title
             recipeTitle = new TextLabel
@@ -288,32 +276,56 @@ namespace RecipeApp
                 PointSize = 11,
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f),
-                Position = new Position((int)(123 * scaleX), (int)(390 * scaleY)),
+                Position = new Position((int)(centerX - (200 * scaleX) / 2), (int)(390 * scaleY)),
                 Size2D = new Size2D((int)(200 * scaleX), (int)(30 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(recipeTitle);
 
-            // Recipe info icons and labels
+            // 5 Stars (centered under title)
+            float starY = (float)(425 * scaleY);
+            float starSpacing = 21 * scaleX;
+            float starsWidth = 5 * 16 * scaleX + 4 * starSpacing;
+            float starsStartX = centerX - (starsWidth / 2);
+            for (int i = 0; i < 5; i++)
+            {
+                starViews[i] = new ImageView
+                {
+                    ResourceUrl = Application.Current.DirectoryInfo.Resource + $"images/home/star{i}.svg",
+                    Size2D = new Size2D((int)(16 * scaleX), (int)(16 * scaleY)),
+                    Position = new Position((int)(starsStartX + i * (16 * scaleX + starSpacing)), (int)starY),
+                    PositionUsesPivotPoint = false
+                };
+                Add(starViews[i]);
+            }
+
+            // Recipe info icons and labels (now below stars)
+            float iconsTotalWidth = 3 * 19 * scaleX + 2 * 40 * scaleX;
+            float iconsStartX = centerX - (iconsTotalWidth / 2);
+            float iconsY = (float)(460 * scaleY);
             for (int i = 0; i < 3; i++)
             {
                 iconViews[i] = new ImageView
                 {
                     ResourceUrl = recipeIcons[(int)selectedCategory][i],
                     Size2D = new Size2D((int)(19 * scaleX), (int)(18 * scaleY)),
-                    Position = new Position((int)(iconPositions[i] * scaleX), (int)(427 * scaleY)),
+                    Position = new Position((int)(iconsStartX + i * (19 * scaleX + 40 * scaleX)), (int)iconsY),
                     PositionUsesPivotPoint = false
                 };
                 Add(iconViews[i]);
             }
             // 5HR text
+            float labelY = (int)(485 * scaleY);
+            float labelSpacing = 59 * scaleX;
+            float labelsTotalWidth = 3 * 40 * scaleX + 2 * labelSpacing;
+            float labelsStartX = centerX - (labelsTotalWidth / 2);
             timeLabel = new TextLabel
             {
                 Text = recipeIconLabels[(int)selectedCategory][0],
                 PointSize = 8,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position((int)(103 * scaleX), (int)(427 * scaleY)),
+                Position = new Position((int)(labelsStartX), (int)labelY),
                 Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
@@ -324,7 +336,7 @@ namespace RecipeApp
                 PointSize = 8,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position((int)(189 * scaleX), (int)(427 * scaleY)),
+                Position = new Position((int)(labelsStartX + 40 * scaleX + labelSpacing), (int)labelY),
                 Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
@@ -335,7 +347,7 @@ namespace RecipeApp
                 PointSize = 8,
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
-                Position = new Position((int)(268 * scaleX), (int)(427 * scaleY)),
+                Position = new Position((int)(labelsStartX + 2 * (40 * scaleX + labelSpacing)), (int)labelY),
                 Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
@@ -348,7 +360,7 @@ namespace RecipeApp
                 PointSize = 8,
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.46f, 0.46f, 0.46f, 1.0f),
-                Position = new Position((int)(21 * scaleX), (int)(462 * scaleY)),
+                Position = new Position((int)(centerX - (335 * scaleX) / 2), (int)(462 * scaleY)),
                 Size2D = new Size2D((int)(335 * scaleX), (int)(200 * scaleY)),
                 MultiLine = true,
                 HorizontalAlignment = HorizontalAlignment.Center,
