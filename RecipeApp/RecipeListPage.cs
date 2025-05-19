@@ -45,7 +45,7 @@ namespace RecipeApp
             var popularRecipes = new TextLabel
             {
                 Text = "POPULAR RECIPES",
-                PointSize = 13.53f, // 18px = 13.53pt
+                PointSize = 11, // decreased by 3 and rounded
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.92f, 0.34f, 0.34f, 1.0f), // #eb5757
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -63,7 +63,7 @@ namespace RecipeApp
             var appetizers = new TextLabel
             {
                 Text = "APPETIZERS",
-                PointSize = 9.77f, // 13px = 9.77pt
+                PointSize = 7, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f), // #737373
                 Position = new Position((int)appetizersX, (int)catY),
@@ -75,7 +75,7 @@ namespace RecipeApp
             var entrees = new TextLabel
             {
                 Text = "ENTREES",
-                PointSize = 9.77f, // 13px = 9.77pt
+                PointSize = 7, // decreased by 3 and rounded
                 FontFamily = "Roboto-Medium",
                 TextColor = Color.Black,
                 Position = new Position((int)entreesX, (int)catY),
@@ -87,7 +87,7 @@ namespace RecipeApp
             var dessert = new TextLabel
             {
                 Text = "DESSERT",
-                PointSize = 9.77f, // 13px = 9.77pt
+                PointSize = 7, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f),
                 Position = new Position((int)dessertX, (int)catY),
@@ -105,32 +105,62 @@ namespace RecipeApp
             };
             Add(underline);
 
-            // Mask groups (decorative SVGs, left/right)
-            var maskGroupLeft = new ImageView
+            // Carousel for maskGroupLeft, maskGroupRight, and recipeRect
+            var carouselImages = new[]
             {
-                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
-                Position = new Position((int)(-133 * scaleX), (int)(136 * scaleY)),
-                PositionUsesPivotPoint = false
+                Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png"
             };
-            Add(maskGroupLeft);
-
-            var maskGroupRight = new ImageView
+            int carouselIndex = 0;
+            var carouselView = new ImageView
             {
-                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
-                Position = new Position((int)(308 * scaleX), (int)(136 * scaleY)),
-                PositionUsesPivotPoint = false
-            };
-            Add(maskGroupRight);
-
-            // Main recipe rectangle (center)
-            var recipeRect = new ImageView
-            {
-                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
+                ResourceUrl = carouselImages[carouselIndex],
                 Size2D = new Size2D((int)(221 * scaleX), (int)(221 * scaleY)),
                 Position = new Position((int)(77 * scaleX), (int)(126 * scaleY)),
                 PositionUsesPivotPoint = false
             };
-            Add(recipeRect);
+            Add(carouselView);
+
+            // Left button
+            var leftBtn = new ImageView
+            {
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/btn-menu0.svg",
+                Size2D = new Size2D((int)(30 * scaleX), (int)(30 * scaleY)),
+                Position = new Position((int)(30 * scaleX), (int)(226 * scaleY)),
+                PositionUsesPivotPoint = false
+            };
+            Add(leftBtn);
+
+            // Right button
+            var rightBtn = new ImageView
+            {
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/home/btn-search0.svg",
+                Size2D = new Size2D((int)(30 * scaleX), (int)(30 * scaleY)),
+                Position = new Position((int)(320 * scaleX), (int)(226 * scaleY)),
+                PositionUsesPivotPoint = false
+            };
+            Add(rightBtn);
+
+            // Button logic for carousel
+            leftBtn.TouchEvent += (s, e) =>
+            {
+                if (e.Touch.GetState(0) == PointStateType.Up)
+                {
+                    carouselIndex = (carouselIndex + carouselImages.Length - 1) % carouselImages.Length;
+                    carouselView.ResourceUrl = carouselImages[carouselIndex];
+                }
+                return false;
+            };
+            rightBtn.TouchEvent += (s, e) =>
+            {
+                if (e.Touch.GetState(0) == PointStateType.Up)
+                {
+                    carouselIndex = (carouselIndex + 1) % carouselImages.Length;
+                    carouselView.ResourceUrl = carouselImages[carouselIndex];
+                }
+                return false;
+            };
 
             // Heart button (top right of rectangle)
             var heartBtn = new ImageView
@@ -162,7 +192,7 @@ namespace RecipeApp
             var recipeTitle = new TextLabel
             {
                 Text = "Prime Rib Roast",
-                PointSize = 13.53f, // 18px = 13.53pt
+                PointSize = 11, // decreased by 3 and rounded
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f), // #19597d
                 Position = new Position((int)(123 * scaleX), (int)(390 * scaleY)),
@@ -189,11 +219,11 @@ namespace RecipeApp
             var timeLabel = new TextLabel
             {
                 Text = "5HR",
-                PointSize = 10.53f, // 14px = 10.53pt
+                PointSize = 8, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(103 * scaleX), (int)(427 * scaleY)),
-                Size2D = new Size2D((int)(40 * scaleX), (int)(18 * scaleY)),
+                Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(timeLabel);
@@ -201,11 +231,11 @@ namespace RecipeApp
             var calLabel = new TextLabel
             {
                 Text = "685",
-                PointSize = 10.53f, // 14px = 10.53pt
+                PointSize = 8, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(189 * scaleX), (int)(427 * scaleY)),
-                Size2D = new Size2D((int)(40 * scaleX), (int)(18 * scaleY)),
+                Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(calLabel);
@@ -213,11 +243,11 @@ namespace RecipeApp
             var likeLabel = new TextLabel
             {
                 Text = "107",
-                PointSize = 10.53f, // 14px = 10.53pt
+                PointSize = 8, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(268 * scaleX), (int)(427 * scaleY)),
-                Size2D = new Size2D((int)(40 * scaleX), (int)(18 * scaleY)),
+                Size2D = new Size2D((int)(40 * scaleX), (int)(23 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             Add(likeLabel);
@@ -226,7 +256,7 @@ namespace RecipeApp
             var descLabel = new TextLabel
             {
                 Text = "The Prime Rib Roast is a classic and tender cut of beef taken from the rib primal cut. Learn how to make the perfect prime rib roast to serve your family and friends. Check out What’s Cooking America’s award-winning Classic Prime Rib Roast recipe and photo tutorial to help you make the Perfect Prime Rib Roast.",
-                PointSize = 12.78f, // 17px = 12.78pt (if you want to keep 17px as before, otherwise use 13.53f for 18px)
+                PointSize = 10, // decreased by 3 and rounded
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.46f, 0.46f, 0.46f, 1.0f), // #757575
                 Position = new Position((int)(21 * scaleX), (int)(462 * scaleY)),
