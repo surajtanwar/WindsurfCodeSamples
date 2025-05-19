@@ -161,21 +161,21 @@ namespace RecipeApp
             // Carousel for maskGroupLeft, maskGroupRight, and recipeRect
             carouselImages[0] = new[]
             {
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup1.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup0.svg",
                 Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png"
             };
             carouselImages[1] = new[]
             {
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup1.svg",
                 Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png"
             };
             carouselImages[2] = new[]
             {
                 Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group1.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/mask-group0.svg"
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup1.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/maskgroup0.svg"
             };
             recipeTitles[0] = "Bruschetta";
             recipeTitles[1] = "Prime Rib Roast";
@@ -184,19 +184,19 @@ namespace RecipeApp
             recipeDescriptions[1] = "The Prime Rib Roast is a classic and tender cut of beef taken from the rib primal cut. Learn how to make the perfect prime rib roast to serve your family and friends. Check out What’s Cooking America’s award-winning Classic Prime Rib Roast recipe and photo tutorial to help you make the Perfect Prime Rib Roast.";
             recipeDescriptions[2] = "Rich, moist chocolate cake layered with creamy chocolate frosting.";
             recipeIcons[0] = new string[] {
-                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg",                
                 Application.Current.DirectoryInfo.Resource + "images/home/icons1.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg"
+                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg"
             };
             recipeIcons[1] = new string[] {
-                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg",                
                 Application.Current.DirectoryInfo.Resource + "images/home/icons1.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg"
+                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg"
             };
             recipeIcons[2] = new string[] {
-                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg",
+                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg",                
                 Application.Current.DirectoryInfo.Resource + "images/home/icons1.svg",
-                Application.Current.DirectoryInfo.Resource + "images/home/icons2.svg"
+                Application.Current.DirectoryInfo.Resource + "images/home/icons0.svg"
             };
             recipeIconLabels[0] = new string[] { "10M", "150", "24" };
             recipeIconLabels[1] = new string[] { "5HR", "685", "107" };
