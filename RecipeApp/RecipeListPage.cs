@@ -266,7 +266,7 @@ namespace RecipeApp
             Add(heartBtn);
 
             // 5 Stars (centered over rectangle)
-            float starsStartX = (float)(123 * scaleX);
+            float starsStartX = (float)(130 * scaleX);
             float starY = (float)(356 * scaleY);
             float starSpacing = 21 * scaleX;
             for (int i = 0; i < 5; i++)
@@ -288,7 +288,7 @@ namespace RecipeApp
                 PointSize = 11,
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f),
-                Position = new Position((int)(123 * scaleX), (int)(390 * scaleY)),
+                Position = new Position((int)(85 * scaleX), (int)(390 * scaleY)),
                 Size2D = new Size2D((int)(200 * scaleX), (int)(30 * scaleY)),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
