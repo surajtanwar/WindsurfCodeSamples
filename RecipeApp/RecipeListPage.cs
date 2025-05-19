@@ -269,21 +269,8 @@ namespace RecipeApp
             };
             Add(heartBtn);
 
-            // Recipe title
-            recipeTitle = new TextLabel
-            {
-                Text = recipeTitles[(int)selectedCategory],
-                PointSize = 11,
-                FontFamily = "Roboto-Bold",
-                TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f),
-                Position = new Position((int)(centerX - (200 * scaleX) / 2), (int)(390 * scaleY)),
-                Size2D = new Size2D((int)(200 * scaleX), (int)(30 * scaleY)),
-                HorizontalAlignment = HorizontalAlignment.Center
-            };
-            Add(recipeTitle);
-
-            // 5 Stars (centered under title)
-            float starY = (float)(425 * scaleY);
+            // 5 Stars (centered over rectangle)
+            float starY = (float)(356 * scaleY);
             float starSpacing = 21 * scaleX;
             float starsWidth = 5 * 16 * scaleX + 4 * starSpacing;
             float starsStartX = centerX - (starsWidth / 2);
@@ -299,23 +286,35 @@ namespace RecipeApp
                 Add(starViews[i]);
             }
 
-            // Recipe info icons and labels (now below stars)
+            // Recipe title
+            recipeTitle = new TextLabel
+            {
+                Text = recipeTitles[(int)selectedCategory],
+                PointSize = 11,
+                FontFamily = "Roboto-Bold",
+                TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f),
+                Position = new Position((int)(centerX - (200 * scaleX) / 2), (int)(390 * scaleY)),
+                Size2D = new Size2D((int)(200 * scaleX), (int)(30 * scaleY)),
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
+            Add(recipeTitle);
+
+            // Recipe info icons and labels
             float iconsTotalWidth = 3 * 19 * scaleX + 2 * 40 * scaleX;
             float iconsStartX = centerX - (iconsTotalWidth / 2);
-            float iconsY = (float)(460 * scaleY);
             for (int i = 0; i < 3; i++)
             {
                 iconViews[i] = new ImageView
                 {
                     ResourceUrl = recipeIcons[(int)selectedCategory][i],
                     Size2D = new Size2D((int)(19 * scaleX), (int)(18 * scaleY)),
-                    Position = new Position((int)(iconsStartX + i * (19 * scaleX + 40 * scaleX)), (int)iconsY),
+                    Position = new Position((int)(iconsStartX + i * (19 * scaleX + 40 * scaleX)), (int)(427 * scaleY)),
                     PositionUsesPivotPoint = false
                 };
                 Add(iconViews[i]);
             }
             // 5HR text
-            float labelY = (int)(485 * scaleY);
+            float labelY = (int)(427 * scaleY);
             float labelSpacing = 59 * scaleX;
             float labelsTotalWidth = 3 * 40 * scaleX + 2 * labelSpacing;
             float labelsStartX = centerX - (labelsTotalWidth / 2);
