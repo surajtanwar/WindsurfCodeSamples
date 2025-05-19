@@ -45,7 +45,7 @@ namespace RecipeApp
             var popularRecipes = new TextLabel
             {
                 Text = "POPULAR RECIPES",
-                PointSize = 18.0f * scale,
+                PointSize = 13.53f, // 18px = 13.53pt
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.92f, 0.34f, 0.34f, 1.0f), // #eb5757
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -63,7 +63,7 @@ namespace RecipeApp
             var appetizers = new TextLabel
             {
                 Text = "APPETIZERS",
-                PointSize = 13.0f * scale,
+                PointSize = 9.77f, // 13px = 9.77pt
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f), // #737373
                 Position = new Position((int)appetizersX, (int)catY),
@@ -75,7 +75,7 @@ namespace RecipeApp
             var entrees = new TextLabel
             {
                 Text = "ENTREES",
-                PointSize = 13.0f * scale,
+                PointSize = 9.77f, // 13px = 9.77pt
                 FontFamily = "Roboto-Medium",
                 TextColor = Color.Black,
                 Position = new Position((int)entreesX, (int)catY),
@@ -87,7 +87,7 @@ namespace RecipeApp
             var dessert = new TextLabel
             {
                 Text = "DESSERT",
-                PointSize = 13.0f * scale,
+                PointSize = 9.77f, // 13px = 9.77pt
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.45f, 0.45f, 0.45f, 1.0f),
                 Position = new Position((int)dessertX, (int)catY),
@@ -162,7 +162,7 @@ namespace RecipeApp
             var recipeTitle = new TextLabel
             {
                 Text = "Prime Rib Roast",
-                PointSize = 18.0f * scale,
+                PointSize = 13.53f, // 18px = 13.53pt
                 FontFamily = "Roboto-Bold",
                 TextColor = new Color(0.10f, 0.35f, 0.49f, 1.0f), // #19597d
                 Position = new Position((int)(123 * scaleX), (int)(390 * scaleY)),
@@ -189,7 +189,7 @@ namespace RecipeApp
             var timeLabel = new TextLabel
             {
                 Text = "5HR",
-                PointSize = 14.0f * scale,
+                PointSize = 10.53f, // 14px = 10.53pt
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(103 * scaleX), (int)(427 * scaleY)),
@@ -201,7 +201,7 @@ namespace RecipeApp
             var calLabel = new TextLabel
             {
                 Text = "685",
-                PointSize = 14.0f * scale,
+                PointSize = 10.53f, // 14px = 10.53pt
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(189 * scaleX), (int)(427 * scaleY)),
@@ -213,7 +213,7 @@ namespace RecipeApp
             var likeLabel = new TextLabel
             {
                 Text = "107",
-                PointSize = 14.0f * scale,
+                PointSize = 10.53f, // 14px = 10.53pt
                 FontFamily = "Roboto-Regular",
                 TextColor = Color.Black,
                 Position = new Position((int)(268 * scaleX), (int)(427 * scaleY)),
@@ -226,14 +226,19 @@ namespace RecipeApp
             var descLabel = new TextLabel
             {
                 Text = "The Prime Rib Roast is a classic and tender cut of beef taken from the rib primal cut. Learn how to make the perfect prime rib roast to serve your family and friends. Check out What’s Cooking America’s award-winning Classic Prime Rib Roast recipe and photo tutorial to help you make the Perfect Prime Rib Roast.",
-                PointSize = 14.0f * scale,
+                PointSize = 12.78f, // 17px = 12.78pt (if you want to keep 17px as before, otherwise use 13.53f for 18px)
                 FontFamily = "Roboto-Regular",
                 TextColor = new Color(0.46f, 0.46f, 0.46f, 1.0f), // #757575
                 Position = new Position((int)(21 * scaleX), (int)(462 * scaleY)),
-                Size2D = new Size2D((int)(335 * scaleX), (int)(80 * scaleY)),
+                Size2D = new Size2D((int)(335 * scaleX), (int)(200 * scaleY)), // Further increased height for more lines
                 MultiLine = true,
-                HorizontalAlignment = HorizontalAlignment.Center
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center
             };
+            descLabel.Ellipsis = false; // Explicitly disable ellipsis
+            // Remove ellipsis if set elsewhere (default is none for TextLabel)
+            // If needed, descLabel.Ellipsis = false; after creation
+            // Add(descLabel) remains the same.
             Add(descLabel);
         }
     }

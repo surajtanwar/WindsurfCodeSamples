@@ -16,7 +16,6 @@ namespace RecipeApp
             var rectangleBg = new ImageView
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/splash/Rectangle.png",
-                BackgroundColor = Color.Red,
                 Size2D = new Size2D(750, 1334),
                 Position = new Position(0, 0),
                 PositionUsesPivotPoint = false
@@ -27,7 +26,6 @@ namespace RecipeApp
             var groupOverlay = new ImageView
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/splash/Group.png",
-                BackgroundColor = Color.Green,
                 Position = new Position(182, 222),
                 PositionUsesPivotPoint = false,
                 Size2D = new Size2D(386, 320)
@@ -38,7 +36,6 @@ namespace RecipeApp
             var group2Overlay = new ImageView
             {
                 ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/splash/Group_2.png",
-                BackgroundColor = Color.Blue,
                 Position = new Position(186, 730),
                 PositionUsesPivotPoint = false,
                 Size2D = new Size2D(378, 280)
