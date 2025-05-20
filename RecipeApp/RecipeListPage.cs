@@ -1,11 +1,13 @@
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
 using Tizen.Applications;
+using RecipeApp;
 
 namespace RecipeApp
 {
     public class RecipeListPage : View
     {
+        private MenuPage menuPage;
         private enum Category { Appetizers, Entrees, Dessert }
         private Category selectedCategory = Category.Entrees;
         private TextLabel appetizers, entrees, dessert;
@@ -79,6 +81,33 @@ namespace RecipeApp
                 PositionUsesPivotPoint = false
             };
             Add(btnMenu);
+
+            // Menu overlay instance (hidden by default)
+            menuPage = new MenuPage
+            {
+                Position = new Position(0, 0),
+                PositionUsesPivotPoint = true,
+            };
+            menuPage.Hide();
+            Add(menuPage);
+
+            btnMenu.TouchEvent += (s, e) => {
+                if (e.Touch.GetState(0) == PointStateType.Up)
+                {
+                    menuPage.Show();
+                }
+                return false;
+            };
+
+            // Hide menu on menuPage click (optional, can be refined)
+            menuPage.TouchEvent += (s, e) => {
+                if (e.Touch.GetState(0) == PointStateType.Up)
+                {
+                    menuPage.Hide();
+                }
+                return false;
+            };
+
 
             // Search button (top-right)
             var btnSearch = new ImageView
