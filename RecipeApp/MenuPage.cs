@@ -41,7 +41,7 @@ namespace RecipeApp
             {
                 ResourceUrl = "res/images/menu/btn-menu0.svg",
                 Size = new Size(ScaleX(24), ScaleY(18)),
-                Position = new Position(ScaleX(340), ScaleY(10)),
+                Position = new Position(ScaleX(20), ScaleY(10)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
             };
             this.Add(menuBtn);
@@ -51,10 +51,10 @@ namespace RecipeApp
             {
                 Text = "POPULAR RECIPES\nSAVED RECIPES\nSHOPPING LIST\nSETTINGS", // Already uppercase
                 TextColor = Color.White,
-                PointSize = 38.0f, // 20/375*720 = 38
+                PointSize = ScaleY(18), // Responsive font size (smaller)
                 FontFamily = "Roboto Medium",
-                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")), // Use bold for 500 weight
-                Position = new Position(58, 136), // 30/375*720 = 58, 71/667*1280 = 136
+                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
+                Position = new Position(ScaleX(30), ScaleY(71)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
                 MultiLine = true,
                 HorizontalAlignment = HorizontalAlignment.Begin,
@@ -68,10 +68,10 @@ namespace RecipeApp
             {
                 Text = "HARRY TRUMAN", // Already uppercase
                 TextColor = Color.White,
-                PointSize = ScaleY(20),
+                PointSize = ScaleY(14), // Responsive font size (smaller)
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
-                Position = new Position(ScaleX(30), ScaleY(616)),
+                Position = new Position(ScaleX(30), ScaleY(616)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
                 HorizontalAlignment = HorizontalAlignment.Begin,
                 VerticalAlignment = VerticalAlignment.Top,
@@ -82,16 +82,15 @@ namespace RecipeApp
             var ellipse = new ImageView
             {
                 ResourceUrl = "res/images/menu/ellipse0.png",
-                Size = new Size(88, 88), // 46/375*720 = 88
-                Position = new Position(56, 1060), // 29/375*720 = 56, 552/667*1280 = 1060
+                Size = new Size(ScaleX(46), ScaleY(46)),
+                Position = new Position(ScaleX(29), ScaleY(552)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
-                CornerRadius = 44.0f, // Half of width/height for perfect circle
+                CornerRadius = ScaleX(23), // Half of width for perfect circle
                 FittingMode = FittingModeType.ScaleToFill, // Ensures image covers the ellipse
             };
             this.Add(ellipse);
 
             // Line (horizontal, white, rotated 90deg)
-            // White horizontal line (matches .line CSS)
             var line = new View
             {
                 Size = new Size(ScaleX(30), ScaleY(5)),
@@ -101,7 +100,6 @@ namespace RecipeApp
                 Orientation = new Rotation(new Radian((float)(System.Math.PI / 2)), Vector3.ZAxis),
                 CornerRadius = ScaleY(2.5f),
             };
-
             this.Add(line);
         }
     }
