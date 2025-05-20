@@ -18,7 +18,7 @@
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>wFPg4dxq1NVQKkOzOP/8YEgHe1Bwjwxo2HLfVop6To8kIOs5oWNs37YzeJ+j7IOb4obkhEC8odx2MWeeHDdRTg==</DigestValue>
     </Reference>
-    <Reference URI="res%2Fimages%2Fmenu%2FEllipse.png">
+    <Reference URI="res%2Fimages%2Fmenu%2Fellipse0.png">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
       <DigestValue>wVYpNHQZNr5DEvCxwZi3yHFe8J0EbJzsFwDbUr/b5TVIt3v4wO3nhMfe5m9cy85ixbgCCmTi0auAhHS/S2OISQ==</DigestValue>
     </Reference>
@@ -112,15 +112,15 @@
     </Reference>
     <Reference URI="bin%2FRecipeApp.pdb">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>oFWA4WuYlOABQv8svqy1zulHPBPNo6ifSGbVemlDRGhQ9CtM1G0qjuY7SRM6X33fTmL6VM42uyhfwEQffXIDvg==</DigestValue>
+      <DigestValue>pUF/gsqw3xfJZZsD+s2GluPIpg0z57aat7PYLpc04O3rTmKBI+mBPYweY5gB4EU4LgiZWZQDsu0zNOsEhsetqQ==</DigestValue>
     </Reference>
     <Reference URI="bin%2FRecipeApp.dll">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>BjPvpVVeXKnmluFx/osdMWl9OmaAMuYWDvfEG4lBnNrnCBS93OFGybmj/zeYpO42em0H62vgbl9LAbcg69k9bQ==</DigestValue>
+      <DigestValue>+0strq+fNeSsyOzGmre5GnFedzhNcH+uTFW5C2pu3eMbHqK3+PQDN5O3bHAZFTHiIzxzhYf2KrmFWd7Xc5PohQ==</DigestValue>
     </Reference>
     <Reference URI="author-signature.xml">
       <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
-      <DigestValue>DX234c2yOdw8MQj28x0DyWkWFlQueagwPOfUmv2p1e8h4uuHO7M8Qtm+IItIbMMPRVmQkETfxC2MYM7x3XGrWg==</DigestValue>
+      <DigestValue>aZiUUGTM1glbUK0eJHMQZ6YW0KIGiYMRsAGZDtVI5jfDS9dXtYAphzUhXlkUXQzNO5cloYf8QTDf6gIAWsbPvg==</DigestValue>
     </Reference>
     <Reference URI="#prop">
       <Transforms>
@@ -131,9 +131,9 @@
     </Reference>
   </SignedInfo>
   <SignatureValue>
-a/lJ7R4s99aCD+uaBXGL54spZKDv0iZ3OWrJIVAiIC1M1ZW9766/Nbe/P5HZC7sDmGgzvhDHUbTV
-FynJJL8utQYLdwlFU+JSqS0dzHJnK6716yTENCQ4lmPbXUegoLQ52XBRv8ur+3TZwviyGTaKjacU
-qL5MqCTgCMRp6oikW/k=
+FTDao9zxSqQbcLzOShyBp5gZLjMYwPiYLWyrPXAtFA9yKbFxtA0g55XVStU/SIhOXpIryvY9dFtF
+R726OeruH0gN6m6we6HG2vkT4jcpKcre6/x2uP0J+6XKaJBQ0J66FYGl6+lmbsfNk59so3ATZncQ
+idmAz9GfcvCpj+lIaYY=
 </SignatureValue>
   <KeyInfo>
     <X509Data>

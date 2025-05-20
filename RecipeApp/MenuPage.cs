@@ -1,5 +1,6 @@
 using Tizen.NUI;
 using Tizen.NUI.BaseComponents;
+using Tizen.Applications;
 
 namespace RecipeApp
 {
@@ -39,7 +40,7 @@ namespace RecipeApp
             // Menu button (btn-menu0.svg)
             var menuBtn = new ImageView
             {
-                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/menu/btn-menu0.svg",
+                ResourceUrl = Tizen.Applications.Application.Current.DirectoryInfo.Resource + "images/menu/btn-menu0.svg",
                 Size = new Size(ScaleX(24), ScaleY(18)),
                 Position = new Position(ScaleX(20), ScaleY(10)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
@@ -81,7 +82,7 @@ namespace RecipeApp
             // Profile ellipse image
             var ellipse = new ImageView
             {
-                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/menu/ellipse0.png",
+                ResourceUrl = Tizen.Applications.Application.Current.DirectoryInfo.Resource + "images/menu/ellipse0.png",
                 Size = new Size(ScaleX(46), ScaleY(46)),
                 Position = new Position(ScaleX(29), ScaleY(552)), // Inside the rectangle
                 PositionUsesPivotPoint = false,

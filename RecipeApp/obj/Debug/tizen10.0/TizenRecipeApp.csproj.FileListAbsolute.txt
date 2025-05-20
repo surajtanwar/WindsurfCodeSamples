@@ -22,7 +22,7 @@ C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\star3.svg
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\star4.svg
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\menu\btn-menu0.svg
-C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\menu\Ellipse.png
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\menu\ellipse0.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\splash\Group.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\splash\Group_2.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\splash\Rectangle.png
