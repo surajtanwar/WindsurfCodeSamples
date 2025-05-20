@@ -9,12 +9,20 @@ namespace RecipeApp
     /// </summary>
     public class NavigationHandler
     {
+        private static NavigationHandler _instance;
+        public static NavigationHandler Instance => _instance ?? throw new System.InvalidOperationException("NavigationHandler not initialized. Call Initialize(rootView) first.");
+
         private readonly Stack<View> navigationStack = new Stack<View>();
         private readonly View rootView;
 
-        public NavigationHandler(View root)
+        private NavigationHandler(View root)
         {
             rootView = root;
+        }
+
+        public static void Initialize(View root)
+        {
+            _instance = new NavigationHandler(root);
         }
 
         /// <summary>

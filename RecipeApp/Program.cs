@@ -12,6 +12,8 @@ namespace RecipeApp
             ShowSplashScreen();
         }
 
+        private View mainContainer;
+
         private async void ShowSplashScreen()
         {
             var splash = new SplashScreenPage();
@@ -21,9 +23,20 @@ namespace RecipeApp
             Window.Instance.Remove(splash);
             splash.Dispose();
 
-            // Show main page
+            // Create a main container for navigation
+            mainContainer = new View
+            {
+                Size = Window.Instance.WindowSize,
+                Position = new Position(0, 0),
+                PositionUsesPivotPoint = false,
+            };
+            Window.Instance.Add(mainContainer);
+
+            // Initialize navigation handler singleton with mainContainer as root
+            NavigationHandler.Initialize(mainContainer);
+            // Show main page using navigation handler singleton
             var mainPage = new RecipeListPage();
-            Window.Instance.Add(mainPage);
+            NavigationHandler.Instance.Show(mainPage);
         }
 
         static void Main(string[] args)
