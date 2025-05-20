@@ -8,6 +8,7 @@ namespace RecipeApp
     public class RecipeListPage : View
     {
         private MenuPage menuPage;
+        private NavigationHandler navigationHandler;
         private enum Category { Appetizers, Entrees, Dessert }
         private Category selectedCategory = Category.Entrees;
         private TextLabel appetizers, entrees, dessert;
@@ -82,19 +83,20 @@ namespace RecipeApp
             };
             Add(btnMenu);
 
-            // Menu overlay instance (hidden by default)
+            // Initialize navigation handler with this as root view
+            navigationHandler = new NavigationHandler(this);
+
+            // Menu overlay instance (do not add directly)
             menuPage = new MenuPage
             {
                 Position = new Position(0, 0),
                 PositionUsesPivotPoint = true,
             };
-            menuPage.Hide();
-            Add(menuPage);
 
             btnMenu.TouchEvent += (s, e) => {
                 if (e.Touch.GetState(0) == PointStateType.Up)
                 {
-                    menuPage.Show();
+                    navigationHandler.Show(menuPage);
                 }
                 return false;
             };
@@ -103,7 +105,7 @@ namespace RecipeApp
             menuPage.TouchEvent += (s, e) => {
                 if (e.Touch.GetState(0) == PointStateType.Up)
                 {
-                    menuPage.Hide();
+                    navigationHandler.Back();
                 }
                 return false;
             };
