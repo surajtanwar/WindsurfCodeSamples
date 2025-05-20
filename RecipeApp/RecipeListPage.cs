@@ -88,7 +88,7 @@ namespace RecipeApp
             menuPage = new MenuPage
             {
                 Position = new Position(0, 0),
-                PositionUsesPivotPoint = true,
+                PositionUsesPivotPoint = false,
             };
 
             btnMenu.TouchEvent += (s, e) => {

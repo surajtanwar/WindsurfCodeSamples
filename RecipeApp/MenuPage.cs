@@ -39,7 +39,7 @@ namespace RecipeApp
             // Menu button (btn-menu0.svg)
             var menuBtn = new ImageView
             {
-                ResourceUrl = "res/images/menu/btn-menu0.svg",
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/menu/btn-menu0.svg",
                 Size = new Size(ScaleX(24), ScaleY(18)),
                 Position = new Position(ScaleX(20), ScaleY(10)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
@@ -51,7 +51,7 @@ namespace RecipeApp
             {
                 Text = "POPULAR RECIPES\nSAVED RECIPES\nSHOPPING LIST\nSETTINGS", // Already uppercase
                 TextColor = Color.White,
-                PointSize = ScaleY(18),
+                PointSize = 13,
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
                 Position = new Position(ScaleX(30), ScaleY(71)), // Inside the rectangle
@@ -68,7 +68,7 @@ namespace RecipeApp
             {
                 Text = "HARRY TRUMAN", // Already uppercase
                 TextColor = Color.White,
-                PointSize = ScaleY(14),
+                PointSize = 12,
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
                 Position = new Position(ScaleX(30), ScaleY(616)), // Inside the rectangle
@@ -81,7 +81,7 @@ namespace RecipeApp
             // Profile ellipse image
             var ellipse = new ImageView
             {
-                ResourceUrl = "res/images/menu/ellipse0.png",
+                ResourceUrl = Application.Current.DirectoryInfo.Resource + "images/menu/ellipse0.png",
                 Size = new Size(ScaleX(46), ScaleY(46)),
                 Position = new Position(ScaleX(29), ScaleY(552)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
