@@ -29,8 +29,8 @@ namespace RecipeApp
             // Red rectangle background (left side)
             var rectangle = new View
             {
-                Size = new Size(ScaleX(320), actualHeight),
-                Position = new Position(ScaleX(-1), 0),
+                Size = new Size(ScaleX(320) * 2, actualHeight * 2),
+                Position = new Position(ScaleX(-1) * 2, 0),
                 BackgroundColor = new Color(0.92f, 0.34f, 0.34f, 1.0f), // #EB5757
                 PositionUsesPivotPoint = false,
             };
@@ -40,8 +40,8 @@ namespace RecipeApp
             var menuBtn = new ImageView
             {
                 ResourceUrl = "res/images/menu/btn-menu0.svg",
-                Size = new Size(ScaleX(24), ScaleY(18)),
-                Position = new Position(ScaleX(20), ScaleY(10)), // Inside the rectangle
+                Size = new Size(ScaleX(24) * 2, ScaleY(18) * 2),
+                Position = new Position(ScaleX(20) * 2, ScaleY(10) * 2), // Inside the rectangle
                 PositionUsesPivotPoint = false,
             };
             this.Add(menuBtn);
@@ -51,10 +51,10 @@ namespace RecipeApp
             {
                 Text = "POPULAR RECIPES\nSAVED RECIPES\nSHOPPING LIST\nSETTINGS", // Already uppercase
                 TextColor = Color.White,
-                PointSize = ScaleY(18), // Responsive font size (smaller)
+                PointSize = ScaleY(18) * 2, // Double font size
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
-                Position = new Position(ScaleX(30), ScaleY(71)), // Inside the rectangle
+                Position = new Position(ScaleX(30) * 2, ScaleY(71) * 2), // Double position
                 PositionUsesPivotPoint = false,
                 MultiLine = true,
                 HorizontalAlignment = HorizontalAlignment.Begin,
@@ -68,10 +68,10 @@ namespace RecipeApp
             {
                 Text = "HARRY TRUMAN", // Already uppercase
                 TextColor = Color.White,
-                PointSize = ScaleY(14), // Responsive font size (smaller)
+                PointSize = ScaleY(14) * 2, // Double font size
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
-                Position = new Position(ScaleX(30), ScaleY(616)), // Inside the rectangle
+                Position = new Position(ScaleX(30) * 2, ScaleY(616) * 2), // Double position
                 PositionUsesPivotPoint = false,
                 HorizontalAlignment = HorizontalAlignment.Begin,
                 VerticalAlignment = VerticalAlignment.Top,
@@ -82,10 +82,10 @@ namespace RecipeApp
             var ellipse = new ImageView
             {
                 ResourceUrl = "res/images/menu/ellipse0.png",
-                Size = new Size(ScaleX(46), ScaleY(46)),
-                Position = new Position(ScaleX(29), ScaleY(552)), // Inside the rectangle
+                Size = new Size(ScaleX(46) * 2, ScaleY(46) * 2),
+                Position = new Position(ScaleX(29) * 2, ScaleY(552) * 2), // Inside the rectangle
                 PositionUsesPivotPoint = false,
-                CornerRadius = ScaleX(23), // Half of width for perfect circle
+                CornerRadius = ScaleX(23) * 2, // Half of width for perfect circle
                 FittingMode = FittingModeType.ScaleToFill, // Ensures image covers the ellipse
             };
             this.Add(ellipse);
@@ -93,12 +93,12 @@ namespace RecipeApp
             // Line (horizontal, white, rotated 90deg)
             var line = new View
             {
-                Size = new Size(ScaleX(30), ScaleY(5)),
-                Position = new Position(ScaleX(16), ScaleY(68)),
+                Size = new Size(ScaleX(30) * 2, ScaleY(5) * 2),
+                Position = new Position(ScaleX(16) * 2, ScaleY(68) * 2),
                 BackgroundColor = Color.White,
                 PositionUsesPivotPoint = false,
                 Orientation = new Rotation(new Radian((float)(System.Math.PI / 2)), Vector3.ZAxis),
-                CornerRadius = ScaleY(2.5f),
+                CornerRadius = ScaleY(2.5f) * 2,
             };
             this.Add(line);
         }
