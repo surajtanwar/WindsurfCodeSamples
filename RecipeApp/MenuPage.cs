@@ -48,28 +48,80 @@ namespace RecipeApp
             this.Add(menuBtn);
 
             // Menu items text
-            var menuItems = new TextLabel
+            // Individual menu items as separate TextLabels
+            var menuItem1 = new TextLabel
             {
-                Text = "POPULAR RECIPES\nSAVED RECIPES\nSHOPPING LIST\nSETTINGS", // Already uppercase
+                Text = "POPULAR RECIPES",
                 TextColor = Color.White,
-                PointSize = 13,
+                PointSize = 12.0f,
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
-                Position = new Position(ScaleX(30), ScaleY(71)), // Inside the rectangle
+                Position = new Position(ScaleX(30), ScaleY(71)),
                 PositionUsesPivotPoint = false,
-                MultiLine = true,
                 HorizontalAlignment = HorizontalAlignment.Begin,
                 VerticalAlignment = VerticalAlignment.Top,
                 EnableMarkup = false,
             };
-            this.Add(menuItems);
+            this.Add(menuItem1);
+            menuItem1.TouchEvent += (s, e) => {
+                if (e.Touch.GetState(0) == PointStateType.Up)
+                {
+                    NavigationHandler.Instance.Show(new RecipeListPage());
+                }
+                return false;
+            };
+
+            var menuItem2 = new TextLabel
+            {
+                Text = "SAVED RECIPES",
+                TextColor = Color.White,
+                PointSize = 12.0f,
+                FontFamily = "Roboto Medium",
+                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
+                Position = new Position(ScaleX(30), ScaleY(111)),
+                PositionUsesPivotPoint = false,
+                HorizontalAlignment = HorizontalAlignment.Begin,
+                VerticalAlignment = VerticalAlignment.Top,
+                EnableMarkup = false,
+            };
+            this.Add(menuItem2);
+
+            var menuItem3 = new TextLabel
+            {
+                Text = "SHOPPING LIST",
+                TextColor = Color.White,
+                PointSize = 12.0f,
+                FontFamily = "Roboto Medium",
+                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
+                Position = new Position(ScaleX(30), ScaleY(151)),
+                PositionUsesPivotPoint = false,
+                HorizontalAlignment = HorizontalAlignment.Begin,
+                VerticalAlignment = VerticalAlignment.Top,
+                EnableMarkup = false,
+            };
+            this.Add(menuItem3);
+
+            var menuItem4 = new TextLabel
+            {
+                Text = "SETTINGS",
+                TextColor = Color.White,
+                PointSize = 12.0f,
+                FontFamily = "Roboto Medium",
+                FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
+                Position = new Position(ScaleX(30), ScaleY(191)),
+                PositionUsesPivotPoint = false,
+                HorizontalAlignment = HorizontalAlignment.Begin,
+                VerticalAlignment = VerticalAlignment.Top,
+                EnableMarkup = false,
+            };
+            this.Add(menuItem4);
 
             // Profile name
             var profileName = new TextLabel
             {
                 Text = "HARRY TRUMAN", // Already uppercase
                 TextColor = Color.White,
-                PointSize = 12,
+                PointSize = 11.0f,
                 FontFamily = "Roboto Medium",
                 FontStyle = new PropertyMap().Add("weight", new PropertyValue("bold")),
                 Position = new Position(ScaleX(30), ScaleY(616)), // Inside the rectangle
