@@ -2,10 +2,12 @@ C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\bin\RecipeA
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\bin\RecipeApp.pdb
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\RecipeApp.deps.json
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\5-stars.png
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\appetizer.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\btn-menu0.svg
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\btn-search0.svg
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\button-heart.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\button-heart0.svg
+C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\dessert.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\icons.png
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\icons.svg
 C:\GitRepo\WindsurfCodeSamples\RecipeApp\bin\Debug\tizen10.0\tpkroot\res\images\home\icons0.svg

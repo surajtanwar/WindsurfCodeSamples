@@ -190,21 +190,21 @@ namespace RecipeApp
             // Carousel for maskGroupLeft, maskGroupRight, and recipeRect
             carouselImages[0] = new[]
             {
-                Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
                 Application.Current.DirectoryInfo.Resource + "images/home/appetizer.png",
+                Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
                 Application.Current.DirectoryInfo.Resource + "images/home/dessert.png"
             };
             carouselImages[1] = new[]
             {
-                Application.Current.DirectoryInfo.Resource + "images/home/appetizer.png",
                 Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
+                Application.Current.DirectoryInfo.Resource + "images/home/appetizer.png",
                 Application.Current.DirectoryInfo.Resource + "images/home/dessert.png"
             };
             carouselImages[2] = new[]
             {
-                Application.Current.DirectoryInfo.Resource + "images/home/appetizer.png",
-                Application.Current.DirectoryInfo.Resource + "images/home/dessert.png"
-                Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png",
+                Application.Current.DirectoryInfo.Resource + "images/home/dessert.png",
+                Application.Current.DirectoryInfo.Resource + "images/home/appetizer.png",                
+                Application.Current.DirectoryInfo.Resource + "images/home/rectangle0.png"
             };
             recipeTitles[0] = "Bruschetta";
             recipeTitles[1] = "Prime Rib Roast";
