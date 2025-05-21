@@ -42,7 +42,7 @@ namespace RecipeApp
             {
                 ResourceUrl = Tizen.Applications.Application.Current.DirectoryInfo.Resource + "images/menu/btn-menu0.svg",
                 Size = new Size(ScaleX(24), ScaleY(18)),
-                Position = new Position(ScaleX(20), ScaleY(10)), // Inside the rectangle
+                Position = new Position(ScaleX(340), ScaleY(10)), // Inside the rectangle
                 PositionUsesPivotPoint = false,
             };
             this.Add(menuBtn);
@@ -147,7 +147,7 @@ namespace RecipeApp
             var line = new View
             {
                 Size = new Size(ScaleX(30), ScaleY(5)),
-                Position = new Position(ScaleX(16), ScaleY(68)),
+                Position = new Position(ScaleX(5), ScaleY(80)),
                 BackgroundColor = Color.White,
                 PositionUsesPivotPoint = false,
                 Orientation = new Rotation(new Radian((float)(System.Math.PI / 2)), Vector3.ZAxis),
